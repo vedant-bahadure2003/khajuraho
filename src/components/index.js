@@ -1,0 +1,11 @@
+export { default as Navbar } from "./Navbar";
+export { default as Hero } from "./Hero";
+export { default as About } from "./About";
+export { default as Schedule } from "./Schedule";
+export { default as Artists } from "./Artists";
+export { default as Visit } from "./Visit";
+export { default as Gallery } from "./Gallery";
+export { default as Registration } from "./Registration";
+export { default as FAQs } from "./FAQs";
+export { default as Sponsors } from "./Sponsors";
+export { default as Footer } from "./Footer";

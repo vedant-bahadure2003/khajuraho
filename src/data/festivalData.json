@@ -1,0 +1,374 @@
+{
+  "festivalInfo": {
+    "title": "Khajuraho Dance Festival",
+    "year": 2025,
+    "startDate": "2025-02-20",
+    "endDate": "2025-02-26",
+    "venue": "Western Group of Temples",
+    "location": "Khajuraho, Madhya Pradesh, India",
+    "organizer": "Madhya Pradesh Tourism & Department of Culture",
+    "freeEntry": true,
+    "highlights": [
+      "UNESCO World Heritage Backdrop",
+      "Classical Dance Forms",
+      "7 Days of Cultural Celebration",
+      "Family-Friendly Events",
+      "Live Music Performances"
+    ]
+  },
+  "taglines": [
+    "Where Temples Meet Rhythm",
+    "Classical Dance Under Temple Lights",
+    "A Week of India's Living Traditions",
+    "Heritage. Grace. Celebration.",
+    "Dance with the Divine",
+    "Where Art Echoes Through Stone"
+  ],
+  "days": [
+    {
+      "date": "2025-02-20",
+      "dayName": "Day 1 - Inauguration",
+      "events": [
+        {
+          "time": "6:00 PM",
+          "artist": "Inaugural Ceremony",
+          "form": "Opening",
+          "bio": "Grand inauguration with traditional lamp lighting ceremony and welcome performances.",
+          "thumbnail": "/artists/inauguration.webp"
+        },
+        {
+          "time": "7:00 PM",
+          "artist": " deepika padukone",
+          "form": "Actress & Dancer",
+          "bio": "Padma Vibhushan awardee and renowned classical dancer with over 50 years of experience in Bharatanatyam and Odissi.",
+          "thumbnail": "https://cdn.shopify.com/s/files/1/0688/8498/8193/files/Classic_Red_Banarasi_1024x1024.jpg?v=1745077809"
+        },
+        {
+          "time": "8:30 PM",
+          "artist": "Pandit Birju Maharaj Troupe",
+          "form": "Kathak",
+          "bio": "Disciples of the legendary Pandit Birju Maharaj presenting traditional Lucknow gharana Kathak.",
+          "thumbnail": "/artists/artist2.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-21",
+      "dayName": "Day 2 - Eastern Traditions",
+      "events": [
+        {
+          "time": "6:30 PM",
+          "artist": "Aruna Mohanty",
+          "form": "Odissi",
+          "bio": "National Award winner known for her innovative choreography and devotional expressions in Odissi.",
+          "thumbnail": "/artists/artist3.webp"
+        },
+        {
+          "time": "7:45 PM",
+          "artist": "Bimbavati Devi",
+          "form": "Manipuri",
+          "bio": "Sangeet Natak Akademi awardee, preserving the delicate grace of Manipuri Ras Lila traditions.",
+          "thumbnail": "/artists/artist4.webp"
+        },
+        {
+          "time": "9:00 PM",
+          "artist": "Sharmila Biswas",
+          "form": "Odissi",
+          "bio": "Acclaimed Odissi exponent known for her lyrical movements and dramatic interpretations.",
+          "thumbnail": "/artists/artist5.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-22",
+      "dayName": "Day 3 - Southern Heritage",
+      "events": [
+        {
+          "time": "6:30 PM",
+          "artist": "Priyadarshini Govind",
+          "form": "Bharatanatyam",
+          "bio": "Vice Chancellor of Tamil Nadu Music and Fine Arts University, renowned for her abhinaya expertise.",
+          "thumbnail": "/artists/artist6.webp"
+        },
+        {
+          "time": "7:45 PM",
+          "artist": "Kuchipudi Ensemble",
+          "form": "Kuchipudi",
+          "bio": "Traditional Kuchipudi troupe presenting classical narratives from Andhra Pradesh.",
+          "thumbnail": "/artists/artist7.webp"
+        },
+        {
+          "time": "9:00 PM",
+          "artist": "Sadanam Balakrishnan",
+          "form": "Kathakali",
+          "bio": "Master Kathakali artist bringing Kerala's dramatic dance form with elaborate costumes and expressions.",
+          "thumbnail": "/artists/artist8.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-23",
+      "dayName": "Day 4 - Fusion & Innovation",
+      "events": [
+        {
+          "time": "6:30 PM",
+          "artist": "Aditi Mangaldas",
+          "form": "Kathak",
+          "bio": "Contemporary Kathak pioneer blending traditional grammar with modern themes and expressions.",
+          "thumbnail": "/artists/artist9.webp"
+        },
+        {
+          "time": "7:45 PM",
+          "artist": "Malavika Sarukkai",
+          "form": "Bharatanatyam",
+          "bio": "Padma Shri awardee known for her solo productions exploring contemporary themes.",
+          "thumbnail": "/artists/artist10.webp"
+        },
+        {
+          "time": "9:00 PM",
+          "artist": "Fusion Night Ensemble",
+          "form": "Contemporary",
+          "bio": "Special collaborative performance blending classical and modern dance vocabularies.",
+          "thumbnail": "/artists/artist11.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-24",
+      "dayName": "Day 5 - Youth Celebration",
+      "events": [
+        {
+          "time": "5:00 PM",
+          "artist": "Young Artists Showcase",
+          "form": "Various",
+          "bio": "Platform for emerging talents from various dance academies across India.",
+          "thumbnail": "/artists/artist12.webp"
+        },
+        {
+          "time": "7:00 PM",
+          "artist": "Madhavi Mudgal",
+          "form": "Odissi",
+          "bio": "Padma Shri recipient and founding director of Gandharva Mahavidyalaya's dance wing.",
+          "thumbnail": "/artists/artist13.webp"
+        },
+        {
+          "time": "8:30 PM",
+          "artist": "Parshwanath Upadhye",
+          "form": "Kathak",
+          "bio": "Dynamic Kathak performer known for his powerful footwork and innovative presentations.",
+          "thumbnail": "/artists/artist14.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-25",
+      "dayName": "Day 6 - Grand Gala",
+      "events": [
+        {
+          "time": "6:00 PM",
+          "artist": "Geeta Chandran",
+          "form": "Bharatanatyam",
+          "bio": "Padma Shri awardee and founder of Natya Vriksha, promoting Bharatanatyam globally.",
+          "thumbnail": "/artists/artist15.webp"
+        },
+        {
+          "time": "7:30 PM",
+          "artist": "Rajendra Gangani",
+          "form": "Kathak",
+          "bio": "Jaipur gharana maestro known for preserving traditional compositions and techniques.",
+          "thumbnail": "/artists/artist16.webp"
+        },
+        {
+          "time": "9:00 PM",
+          "artist": "All-Star Finale Preview",
+          "form": "Various",
+          "bio": "Special preview performance featuring highlights from the week's best moments.",
+          "thumbnail": "/artists/artist17.webp"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-26",
+      "dayName": "Day 7 - Grand Finale",
+      "events": [
+        {
+          "time": "6:00 PM",
+          "artist": "Award Ceremony",
+          "form": "Special",
+          "bio": "Recognition ceremony honoring outstanding performances and contributions.",
+          "thumbnail": "/artists/awards.webp"
+        },
+        {
+          "time": "7:00 PM",
+          "artist": "Grand Finale Ensemble",
+          "form": "All Forms",
+          "bio": "Spectacular closing performance featuring all major artists from the festival week.",
+          "thumbnail": "/artists/finale.webp"
+        },
+        {
+          "time": "9:00 PM",
+          "artist": "Closing Ceremony",
+          "form": "Closing",
+          "bio": "Traditional closing with aarti and vote of thanks, marking the end of a glorious week.",
+          "thumbnail": "/artists/closing.webp"
+        }
+      ]
+    }
+  ],
+  "danceForms": [
+    {
+      "name": "Bharatanatyam",
+      "origin": "Tamil Nadu",
+      "description": "Ancient temple dance form known for its geometric patterns and expressive storytelling."
+    },
+    {
+      "name": "Kathak",
+      "origin": "North India",
+      "description": "Storytelling dance with intricate footwork and graceful spins from Mughal courts."
+    },
+    {
+      "name": "Odissi",
+      "origin": "Odisha",
+      "description": "Temple dance characterized by fluid movements and sculptural poses."
+    },
+    {
+      "name": "Kuchipudi",
+      "origin": "Andhra Pradesh",
+      "description": "Dynamic dance-drama tradition with both solo and group performances."
+    },
+    {
+      "name": "Manipuri",
+      "origin": "Manipur",
+      "description": "Devotional dance form known for its gentle, lyrical movements."
+    },
+    {
+      "name": "Kathakali",
+      "origin": "Kerala",
+      "description": "Dramatic art form with elaborate costumes, makeup, and facial expressions."
+    },
+    {
+      "name": "Mohiniyattam",
+      "origin": "Kerala",
+      "description": "Graceful feminine dance form depicting enchanting movements."
+    },
+    {
+      "name": "Sattriya",
+      "origin": "Assam",
+      "description": "Monastic dance tradition originating from Vaishnavite monasteries."
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Madhya Pradesh Tourism",
+      "logo": "/sponsors/mp-tourism.png",
+      "url": "https://www.mptourism.com",
+      "tier": "title"
+    },
+    {
+      "name": "Ministry of Culture",
+      "logo": "/sponsors/ministry-culture.png",
+      "url": "https://www.indiaculture.gov.in",
+      "tier": "title"
+    },
+    {
+      "name": "Air India",
+      "logo": "/sponsors/air-india.png",
+      "url": "https://www.airindia.com",
+      "tier": "gold"
+    },
+    {
+      "name": "Indian Railways",
+      "logo": "/sponsors/railways.png",
+      "url": "https://www.irctc.co.in",
+      "tier": "gold"
+    },
+    {
+      "name": "Incredible India",
+      "logo": "/sponsors/incredible-india.png",
+      "url": "https://www.incredibleindia.org",
+      "tier": "silver"
+    },
+    {
+      "name": "Khajuraho Hotels Association",
+      "logo": "/sponsors/hotels.png",
+      "url": "#",
+      "tier": "silver"
+    }
+  ],
+  "travelInfo": {
+    "nearestAirport": {
+      "name": "Khajuraho Airport (HJR)",
+      "distance": "5 km",
+      "connections": ["Delhi", "Varanasi", "Mumbai"]
+    },
+    "nearestRailway": {
+      "name": "Khajuraho Railway Station",
+      "distance": "3 km",
+      "connections": ["Delhi (Nizamuddin)", "Agra", "Varanasi", "Jhansi"]
+    },
+    "roadAccess": {
+      "fromDelhi": "650 km via NH-44",
+      "fromAgra": "400 km via Gwalior",
+      "fromVaranasi": "280 km via Prayagraj"
+    },
+    "weather": {
+      "month": "February",
+      "temperature": "12°C - 28°C",
+      "description": "Pleasant winter weather, ideal for outdoor events",
+      "recommendation": "Light woolens for evenings, comfortable cotton for daytime"
+    },
+    "checklist": [
+      "Valid ID proof for registration",
+      "Comfortable walking shoes",
+      "Light jacket for evenings",
+      "Camera (flash photography rules apply)",
+      "Water bottle (stay hydrated)",
+      "Seating mat or cushion (optional)"
+    ]
+  },
+  "contact": {
+    "email": "info@khajurahodancefestival.com",
+    "phone": "+91 7686 272 006",
+    "website": "https://www.mptourism.com/khajuraho-dance-festival",
+    "socialMedia": {
+      "facebook": "https://facebook.com/mptourism",
+      "instagram": "https://instagram.com/maboromptourism",
+      "twitter": "https://twitter.com/MPTourism",
+      "youtube": "https://youtube.com/mptourism"
+    }
+  },
+  "faqs": [
+    {
+      "question": "Is entry to the festival free?",
+      "answer": "Yes, entry to the Khajuraho Dance Festival is free. However, registration is recommended for seat allocation and updates about the schedule."
+    },
+    {
+      "question": "What time do performances start?",
+      "answer": "Performances typically begin at sunset, around 6:00-6:30 PM, and continue until 9:30-10:00 PM each evening."
+    },
+    {
+      "question": "Is photography allowed?",
+      "answer": "Photography is allowed during performances, but flash photography may be restricted. Please follow announcements made during the event."
+    },
+    {
+      "question": "What should I wear?",
+      "answer": "Smart casual or traditional Indian attire is appropriate. Evenings can be cool, so bring a light jacket or shawl."
+    },
+    {
+      "question": "Are there seating arrangements?",
+      "answer": "Open-air seating is provided on a first-come-first-served basis. VIP seating may be available through special registration."
+    },
+    {
+      "question": "Is the venue wheelchair accessible?",
+      "answer": "The venue has some accessibility provisions. Please contact organizers in advance for special assistance requirements."
+    },
+    {
+      "question": "Are food and beverages available?",
+      "answer": "Food stalls and refreshment counters are available near the venue. Local cuisine and snacks are offered."
+    },
+    {
+      "question": "Can children attend?",
+      "answer": "Yes, the festival is family-friendly. Children of all ages are welcome, though late evening performances may not be suitable for very young children."
+    }
+  ]
+}
