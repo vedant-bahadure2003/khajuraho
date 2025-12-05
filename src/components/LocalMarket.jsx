@@ -142,7 +142,7 @@ const LocalMarket = ({ isDark }) => {
     <section
       id="local-market"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-b from-dark-bg via-dark-bg/95 to-dark-bg"
           : "bg-gradient-to-b from-offwhite via-sandstone/20 to-offwhite"

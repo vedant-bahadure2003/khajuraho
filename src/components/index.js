@@ -13,3 +13,6 @@ export { default as Footer } from "./Footer";
 export { default as FamousFood } from "./FamousFood";
 export { default as LocalMarket } from "./LocalMarket";
 export { default as AdventurePark } from "./AdventurePark";
+export { default as Chetan } from "./Chetan";
+export { default as WhatsNew } from "./WhatsNew";
+export { default as TalentHunt } from "./TalentHunt";

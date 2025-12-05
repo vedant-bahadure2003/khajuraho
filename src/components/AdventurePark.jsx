@@ -251,7 +251,7 @@ const AdventurePark = ({ isDark }) => {
     <section
       id="adventure"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-br from-dark-bg via-indigo/5 to-dark-bg"
           : "bg-gradient-to-br from-offwhite via-sandstone/30 to-offwhite"

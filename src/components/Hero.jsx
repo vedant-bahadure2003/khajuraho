@@ -10,6 +10,7 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
   const taglines = useMemo(
     () =>
       festivalData?.taglines || [
+        "A RICH TRADITION OF INDIA WITH YOUTH OF INDIA 2026",
         "Where Temples Meet Rhythm",
         "Classical Dance Under Temple Lights",
         "A Week of India's Living Traditions",
@@ -75,11 +76,11 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
     <section
       id="hero"
       ref={elementRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden   "
     >
       {/* Background Image with Parallax */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 "
         style={{
           transform: reducedMotion ? "none" : `translateY(${offset}px)`,
         }}
@@ -87,7 +88,7 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
         <img
           src="https://theunstumbled.com/wp-content/uploads/2025/02/khajuraho-dance-festival.jpg"
           alt="Khajuraho Dance Festival backdrop with illuminated temples"
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover scale-105 "
           loading="eager"
         />
 
@@ -159,7 +160,7 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight flex flex-col gap-2 ">
               <span className="text-offwhite glow-text">Khajuraho </span>
               <span className="text-offwhite glow-text">Natraj</span>{" "}
-              <span className="gradient-text">Dance Festival</span>
+              <span className="gradient-text">Mahotsav 2026</span>
             </h1>
 
             {/* Rotating Tagline */}
@@ -275,33 +276,6 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
               </h3>
 
               <div className="space-y-4">
-                {/* Entry Info */}
-                <div className="flex items-start gap-4 p-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-                  <div className="p-2 rounded-lg bg-saffron/20">
-                    <svg
-                      className="w-6 h-6 text-saffron"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-offwhite/60 text-sm">Entry</p>
-                    <p className="text-offwhite font-semibold text-lg">
-                      {festivalData?.festivalInfo?.freeEntry
-                        ? "✨ Free Entry"
-                        : "Ticketed"}
-                    </p>
-                  </div>
-                </div>
-
                 {/* Organizer */}
                 <div className="flex items-start gap-4 p-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
                   <div className="p-2 rounded-lg bg-indigo/30">

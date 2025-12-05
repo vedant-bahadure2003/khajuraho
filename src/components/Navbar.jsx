@@ -272,35 +272,47 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-full left-0 right-0 transition-all duration-300 ${
+          className={`lg:hidden absolute top-full left-0 right-0 transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
+              ? "opacity-100 translate-y-0 max-h-[80vh]"
+              : "opacity-0 -translate-y-4 max-h-0 pointer-events-none"
           } ${
             isDark
-              ? "bg-dark-bg/98 backdrop-blur-xl"
-              : "bg-offwhite/98 backdrop-blur-xl"
+              ? "bg-dark-bg backdrop-blur-xl border-t border-white/10 shadow-xl shadow-black/20"
+              : "bg-offwhite backdrop-blur-xl border-t border-gray-200 shadow-xl shadow-black/10"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {navLinks.map((link) =>
+          <div className="max-w-7xl mx-auto px-4 py-6 space-y-2 overflow-y-auto max-h-[calc(80vh-48px)]">
+            {navLinks.map((link, index) =>
               link.type === "route" ? (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-200 ${
                     isDark
-                      ? "text-offwhite hover:bg-white/10 hover:text-saffron"
-                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo"
+                      ? "text-offwhite hover:bg-white/10 hover:text-saffron active:bg-white/15"
+                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo active:bg-indigo/15"
                   } ${
                     location.pathname === link.href
                       ? isDark
-                        ? "text-saffron"
-                        : "text-indigo"
+                        ? "bg-saffron/10 text-saffron"
+                        : "bg-indigo/10 text-indigo"
                       : ""
                   }`}
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      location.pathname === link.href
+                        ? isDark
+                          ? "bg-saffron"
+                          : "bg-indigo"
+                        : isDark
+                        ? "bg-white/30"
+                        : "bg-charcoal/30"
+                    }`}
+                  />
                   {link.name}
                 </Link>
               ) : (
@@ -308,21 +320,47 @@ const Navbar = ({ isDark, toggleTheme }) => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-200 ${
                     isDark
-                      ? "text-offwhite hover:bg-white/10 hover:text-saffron"
-                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo"
+                      ? "text-offwhite hover:bg-white/10 hover:text-saffron active:bg-white/15"
+                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo active:bg-indigo/15"
                   }`}
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      isDark ? "bg-white/30" : "bg-charcoal/30"
+                    }`}
+                  />
                   {link.name}
                 </a>
               )
             )}
+
+            {/* Divider */}
+            <div
+              className={`my-4 h-px ${isDark ? "bg-white/10" : "bg-gray-200"}`}
+            />
+
+            {/* Register Button */}
             <a
               href="#register"
               onClick={(e) => scrollToSection(e, "#register")}
-              className="block mt-4 text-center px-6 py-3 bg-gradient-to-r from-saffron to-sandstone text-white font-semibold rounded-full glow-gold"
+              className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-saffron to-sandstone text-white font-semibold rounded-xl shadow-lg shadow-saffron/20 hover:shadow-xl hover:shadow-saffron/30 transition-all duration-300 active:scale-[0.98]"
             >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
               Register Now
             </a>
           </div>

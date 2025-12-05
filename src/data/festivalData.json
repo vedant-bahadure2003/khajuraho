@@ -17,6 +17,7 @@
     ]
   },
   "taglines": [
+    "A RICH TRADITION OF INDIA WITH YOUTH OF INDIA 2026",
     "Where Temples Meet Rhythm",
     "Classical Dance Under Temple Lights",
     "A Week of India's Living Traditions",
@@ -59,8 +60,8 @@
         {
           "time": "6:30 PM",
           "artist": "Terence Lewis",
-          "form": "Dancer & Judge",
-          "bio": "National Award winner known for her innovative choreography and devotional expressions in Odissi.",
+          "form": "Choreographer & Contemporary Dancer",
+          "bio": "Renowned choreographer and judge known for popularizing contemporary dance in India. Won American Choreography Award for Lagaan and trained at Alvin Ailey and Martha Graham centers in New York.",
           "thumbnail": "https://cdn.starclinch.in/artist/terence-lewis/terence-lewis.png"
         },
         {
@@ -73,8 +74,8 @@
         {
           "time": "9:00 PM",
           "artist": "Prabhu Deva",
-          "form": "Dancer",
-          "bio": "Acclaimed Odissi exponent known for her lyrical movements and dramatic interpretations.",
+          "form": "Dancer, Choreographer & Director",
+          "bio": "Padma Shri awardee known as the 'Indian Michael Jackson'. Two-time National Film Award winner for Best Choreography, trained in Bharatanatyam and known for iconic dance sequences in Indian cinema.",
           "thumbnail": "https://chiloka.com/i/i/p/r/a/prabhu-deva-2.JPG"
         }
       ]
@@ -86,22 +87,22 @@
         {
           "time": "7:45 PM",
           "artist": "Madhuri Dixit",
-          "form": "Actress",
-          "bio": "Traditional Kuchipudi troupe presenting classical narratives from Andhra Pradesh.",
+          "form": "Actress & Kathak Dancer",
+          "bio": "Padma Shri awardee and Bollywood icon, professionally trained in Kathak for 8 years. Six-time Filmfare Award winner known as the 'Dhak Dhak Girl', celebrated for her exceptional dancing abilities.",
           "thumbnail": "https://www.elahe.in/cdn/shop/files/77_d487542f-85fe-4072-b73f-2e38209fef63_2048x.jpg?v=1736416096"
         },
         {
           "time": "6:30 PM",
           "artist": "Amitabh Bachchan",
-          "form": "Actor",
-          "bio": "Vice Chancellor of Tamil Nadu Music and Fine Arts University, renowned for her abhinaya expertise.",
+          "form": "Actor & Cultural Icon",
+          "bio": "Legendary 'Shahenshah of Bollywood' with Padma Vibhushan and Dadasaheb Phalke Award. Four-time National Film Award winner with over 200 films, known as the 'Angry Young Man' of Indian cinema.",
           "thumbnail": "https://images.indianexpress.com/2024/10/Happy-birthday-Mr-Amitabh-Bachchan.jpg"
         },
         {
           "time": "9:00 PM",
           "artist": "Salman Khan",
-          "form": "Actor",
-          "bio": "Master Kathakali artist bringing Kerala's dramatic dance form with elaborate costumes and expressions.",
+          "form": "Actor & Philanthropist",
+          "bio": "Two-time National Film Award winner and Bollywood superstar. Founder of Being Human Foundation, known for blockbusters like Bajrangi Bhaijaan, Sultan, and the Tiger franchise.",
           "thumbnail": "https://w0.peakpx.com/wallpaper/335/429/HD-wallpaper-salman-khan-tiger.jpg"
         }
       ]

@@ -8,6 +8,7 @@ const FamousFood = ({ isDark }) => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredFood, setHoveredFood] = useState(null);
   const scrollRef = useRef(null);
+  const streetScrollRef = useRef(null);
 
   const categories = [
     { id: "all", label: "All Delights", icon: "🍽️" },
@@ -15,6 +16,90 @@ const FamousFood = ({ isDark }) => {
     { id: "south", label: "South India", icon: "🌴" },
     { id: "street", label: "Street Food", icon: "🛒" },
     { id: "sweets", label: "Sweets", icon: "🍮" },
+  ];
+
+  const streetFoods = [
+    {
+      id: 1,
+      name: "Pani Puri",
+      region: "Mumbai",
+      description:
+        "Crispy hollow puris filled with spiced water, tamarind chutney, and potato - an explosion of flavors!",
+      image:
+        "https://www.awesomecuisine.com/wp-content/uploads/2007/11/Pani-Puri.jpg",
+    },
+    {
+      id: 2,
+      name: "Momos",
+      region: "Delhi/North East",
+      description:
+        "Steamed dumplings filled with minced meat or vegetables, served with spicy chutneys - a favorite across Northern India and the Northeast.",
+      image:
+        "https://www.natashamohan.com/wp-content/uploads/2025/01/Weight-Loss-Momos-Recipe-scaled.webp",
+    },
+
+    {
+      id: 3,
+      name: "Vada Pav",
+      region: "Mumbai",
+      description:
+        "Mumbai's iconic spiced potato fritter in a soft bun - the Indian burger that rules the streets.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13plhMyXs0rAVGvaQIlsMtPhhHL5p6pQqnw&s",
+    },
+    {
+      id: 4,
+      name: "Pav Bhaji",
+      region: "Mumbai",
+      description:
+        "Mashed vegetable curry served with buttery toasted buns - Mumbai's beloved street food invention.",
+      image:
+        "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
+    },
+    {
+      id: 5,
+      name: "Bhel Puri",
+      region: "Mumbai",
+      description:
+        "Puffed rice mixed with tangy chutneys, onions, and sev - a refreshing savory snack.",
+      image:
+        "https://foodtrails25.com/wp-content/uploads/2021/05/Bhel-Poori.jpg",
+    },
+    {
+      id: 6,
+      name: "Aloo Tikki",
+      region: "Delhi",
+      description:
+        "Crispy spiced potato patties topped with chutneys and yogurt - North India's street favorite.",
+      image:
+        "https://www.indianveggiedelight.com/wp-content/uploads/2023/07/aloo-tikki-featured.jpg",
+    },
+    {
+      id: 7,
+      name: "Kachori",
+      region: "Rajasthan",
+      description:
+        "Deep-fried flaky pastry stuffed with spiced lentils or onions - Rajasthan's morning delight.",
+      image:
+        "https://c.ndtvimg.com/2018-09/8k5jalao_kchori_625x300_12_September_18.jpg",
+    },
+    {
+      id: 8,
+      name: "Samosa",
+      region: "Pan India",
+      description:
+        "Crispy triangular pastry filled with spiced potatoes and peas - India's most loved snack.",
+      image:
+        "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop",
+    },
+    {
+      id: 9,
+      name: "Dahi Vada",
+      region: "Pan India",
+      description:
+        "Soft lentil dumplings soaked in creamy yogurt with sweet and tangy chutneys.",
+      image: "https://static.toiimg.com/photo/55432577.cms",
+    },
   ];
 
   const famousFoods = [
@@ -70,34 +155,9 @@ const FamousFood = ({ isDark }) => {
       spiceLevel: 3,
       isVeg: true,
     },
+
     {
       id: 5,
-      name: "Pani Puri",
-      region: "Mumbai",
-      category: "street",
-      description:
-        "Crispy hollow puris filled with spiced water, tamarind chutney, and potato - an explosion of flavors!",
-      rating: 4.3,
-      image:
-        "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=400&h=300&fit=crop",
-      spiceLevel: 3,
-      isVeg: true,
-    },
-    {
-      id: 6,
-      name: "Vada Pav",
-      region: "Mumbai",
-      category: "street",
-      description:
-        "Mumbai's iconic spiced potato fritter in a soft bun - the Indian burger that rules the streets.",
-      rating: 4.3,
-      image:
-        "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
-      spiceLevel: 2,
-      isVeg: true,
-    },
-    {
-      id: 7,
       name: "Tandoori Chicken",
       region: "Punjab",
       category: "north",
@@ -110,7 +170,7 @@ const FamousFood = ({ isDark }) => {
       isVeg: false,
     },
     {
-      id: 8,
+      id: 6,
       name: "Gulab Jamun",
       region: "Pan India",
       category: "sweets",
@@ -122,21 +182,9 @@ const FamousFood = ({ isDark }) => {
       spiceLevel: 0,
       isVeg: true,
     },
+
     {
-      id: 9,
-      name: "Pav Bhaji",
-      region: "Mumbai",
-      category: "street",
-      description:
-        "Mashed vegetable curry served with buttery toasted buns - Mumbai's beloved street food invention.",
-      rating: 4.3,
-      image:
-        "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
-      spiceLevel: 2,
-      isVeg: true,
-    },
-    {
-      id: 10,
+      id: 7,
       name: "Rasmalai",
       region: "Bengal",
       category: "sweets",
@@ -144,12 +192,12 @@ const FamousFood = ({ isDark }) => {
         "Soft cottage cheese patties in saffron-cardamom milk - Bengal's gift to dessert lovers.",
       rating: 4.5,
       image:
-        "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=400&h=300&fit=crop",
+        "https://static.toiimg.com/thumb/68358712.cms?imgsize=403497&width=800&height=800",
       spiceLevel: 0,
       isVeg: true,
     },
     {
-      id: 11,
+      id: 8,
       name: "Dal Makhani",
       region: "Punjab",
       category: "north",
@@ -157,12 +205,12 @@ const FamousFood = ({ isDark }) => {
         "Slow-cooked black lentils in creamy tomato gravy, simmered overnight for rich flavor.",
       rating: 4.4,
       image:
-        "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
+        "https://thesassyfoodie.com/wp-content/uploads/2022/02/punjabi-dal-makhani-featured-1.jpg",
       spiceLevel: 1,
       isVeg: true,
     },
     {
-      id: 12,
+      id: 9,
       name: "Idli Sambar",
       region: "Tamil Nadu",
       category: "south",
@@ -206,30 +254,26 @@ const FamousFood = ({ isDark }) => {
     }
   };
 
+  const scrollStreet = (direction) => {
+    if (streetScrollRef.current) {
+      const scrollAmount = 320;
+      streetScrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       id="food"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark ? "bg-dark-bg" : "bg-offwhite"
       }`}
     >
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating food emojis */}
-        <div className="absolute top-10 left-10 text-4xl opacity-10 animate-pulse">
-          🍛
-        </div>
-        <div className="absolute top-1/4 right-20 text-3xl opacity-10 animate-pulse delay-300">
-          🥘
-        </div>
-        <div className="absolute bottom-20 left-1/4 text-4xl opacity-10 animate-pulse delay-500">
-          🍲
-        </div>
-        <div className="absolute bottom-1/3 right-1/3 text-3xl opacity-10 animate-pulse delay-700">
-          🧆
-        </div>
-
         {/* Gradient orbs */}
         <div
           className={`absolute -top-40 -right-40 w-80 h-80 rounded-full blur-3xl ${
@@ -357,7 +401,7 @@ const FamousFood = ({ isDark }) => {
           {/* Scrollable Food Cards */}
           <div
             ref={scrollRef}
-            className={`flex gap-6 overflow-x-auto pb-4 px-2 scrollbar-hide scroll-smooth transition-all duration-700 delay-300 ${
+            className={`flex gap-6 overflow-x-auto pb-4 px-2 scrollbar-hide scroll-smooth transition-all duration-700 delay-300  ${
               hasIntersected
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -370,7 +414,7 @@ const FamousFood = ({ isDark }) => {
             {filteredFoods.map((food, index) => (
               <div
                 key={food.id}
-                className={`flex-shrink-0 w-72 md:w-80 group cursor-pointer transition-all duration-500`}
+                className={`flex-shrink-0 w-72 md:w-80  group cursor-pointer transition-all duration-500`}
                 style={{
                   transitionDelay: `${index * 100}ms`,
                 }}
@@ -378,7 +422,7 @@ const FamousFood = ({ isDark }) => {
                 onMouseLeave={() => setHoveredFood(null)}
               >
                 <div
-                  className={`relative h-full rounded-2xl overflow-hidden transition-all duration-500 ${
+                  className={`relative h-full min-h-[28rem] rounded-2xl overflow-hidden transition-all duration-500 ${
                     isDark
                       ? "bg-white/5 border border-white/10 hover:border-saffron/50"
                       : "bg-white border border-charcoal/10 hover:border-indigo/50"
@@ -389,7 +433,7 @@ const FamousFood = ({ isDark }) => {
                   }`}
                 >
                   {/* Image Container */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     <img
                       src={food.image}
                       alt={food.name}
@@ -484,6 +528,154 @@ const FamousFood = ({ isDark }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Street Food Section */}
+        <div
+          className={`mt-16 transition-all duration-700 delay-400 ${
+            hasIntersected
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          {/* Street Food Header */}
+          <div className="text-center mb-8">
+            <span
+              className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-4 ${
+                isDark
+                  ? "bg-orange-500/20 text-orange-400"
+                  : "bg-orange-100 text-orange-600"
+              }`}
+            >
+              <span className="text-lg">🛒</span>
+              Street Food Special
+            </span>
+            <h3
+              className={`font-heading text-2xl md:text-3xl font-bold ${
+                isDark ? "text-offwhite" : "text-charcoal"
+              }`}
+            >
+              Indian <span className="gradient-text">Street Food</span>
+            </h3>
+          </div>
+
+          {/* Street Food Carousel */}
+          <div className="relative">
+            {/* Navigation Arrows */}
+            <button
+              onClick={() => scrollStreet("left")}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 -ml-4 ${
+                isDark
+                  ? "bg-dark-bg/90 text-orange-400 border border-orange-400/30 hover:bg-orange-400 hover:text-dark-bg"
+                  : "bg-offwhite/90 text-orange-600 border border-orange-600/30 hover:bg-orange-600 hover:text-white"
+              } shadow-lg backdrop-blur-sm`}
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={() => scrollStreet("right")}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 -mr-4 ${
+                isDark
+                  ? "bg-dark-bg/90 text-orange-400 border border-orange-400/30 hover:bg-orange-400 hover:text-dark-bg"
+                  : "bg-offwhite/90 text-orange-600 border border-orange-600/30 hover:bg-orange-600 hover:text-white"
+              } shadow-lg backdrop-blur-sm`}
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            {/* Scrollable Street Food Cards */}
+            <div
+              ref={streetScrollRef}
+              className="flex gap-6 overflow-x-auto pb-4 px-2 scrollbar-hide scroll-smooth"
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
+            >
+              {streetFoods.map((food, index) => (
+                <div
+                  key={food.id}
+                  className="flex-shrink-0 w-72 md:w-80 group cursor-pointer transition-all duration-500"
+                  style={{
+                    transitionDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <div
+                    className={`relative h-64 rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl shadow-lg`}
+                  >
+                    {/* Image */}
+                    <img
+                      src={food.image}
+                      alt={food.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+
+                    {/* Gradient Overlay */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent`}
+                    />
+
+                    {/* Content Overlay */}
+                    <div className="absolute inset-0 flex flex-col justify-end p-5">
+                      {/* Region Tag */}
+                      <span
+                        className={`self-start px-3 py-1 rounded-full text-xs font-medium mb-3 ${
+                          isDark
+                            ? "bg-orange-400/20 text-orange-300"
+                            : "bg-white/20 text-white"
+                        } backdrop-blur-sm`}
+                      >
+                        📍 {food.region}
+                      </span>
+
+                      {/* Name */}
+                      <h4 className="text-xl font-bold text-white mb-2">
+                        {food.name}
+                      </h4>
+
+                      {/* Description */}
+                      <p className="text-sm text-white/80 line-clamp-2 leading-relaxed">
+                        {food.description}
+                      </p>
+                    </div>
+
+                    {/* Hover Border Effect */}
+                    <div
+                      className={`absolute inset-0 rounded-2xl border-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                        isDark ? "border-orange-400/50" : "border-orange-500/50"
+                      }`}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
