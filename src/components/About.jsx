@@ -159,7 +159,7 @@ const About = ({ isDark }) => {
               The Sacred Stage
             </h3>
             <div
-              className={`space-y-4 text-base md:text-lg leading-relaxed ${
+              className={`space-y-4 text-base md:text-lg text-justify leading-relaxed ${
                 isDark ? "text-offwhite/80" : "text-charcoal/80"
               }`}
             >
@@ -261,7 +261,7 @@ const About = ({ isDark }) => {
                 }`}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1564429238881-b2e7a6d73048?w=400&h=500&fit=crop"
+                  src="https://imgs.search.brave.com/X5SvdZWPl_oKH27x9No5qcHW5TTP7_FmCBWFlKSJeBU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGhlcXVpbnQu/Y29tL3RoZXF1aW50/LzIwMTgtMDQvOTg1/ODZiZTgtNjRhMy00/ZDY3LTkzYjgtZWY1/MWZlOTQ1YjY4L0to/YWp1cmFob19kYW5j/ZV8xLmpwZz9hdXRv/PWZvcm1hdCxjb21w/cmVzcyZmbXQ9d2Vi/cCZ3aWR0aD03MjAm/dz0xMjAw"
                   alt="Festival celebration"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />

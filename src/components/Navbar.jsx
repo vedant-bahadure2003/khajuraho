@@ -1,19 +1,22 @@
 import { useState, useEffect, useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = ({ isDark, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Schedule", href: "#schedule" },
-    { name: "Artists", href: "#artists" },
-    { name: "Visit", href: "#visit" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "FAQs", href: "#faqs" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "#about", type: "scroll" },
+    { name: "Schedule", href: "#schedule", type: "scroll" },
+    { name: "Artists", href: "#artists", type: "scroll" },
+    { name: "Visit", href: "#visit", type: "scroll" },
+    { name: "Gallery", href: "/gallery", type: "route" },
+    { name: "FAQs", href: "#faqs", type: "scroll" },
+    { name: "Contact", href: "#contact", type: "scroll" },
   ];
 
   const handleScroll = useCallback(() => {
@@ -37,11 +40,31 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -67,9 +90,9 @@ const Navbar = ({ isDark, toggleTheme }) => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a
-              href="#hero"
+              href="/"
               className="flex items-center gap-2 group"
-              onClick={(e) => scrollToSection(e, "#hero")}
+              onClick={handleLogoClick}
             >
               <div className="relative">
                 <svg
@@ -102,7 +125,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
               <span
                 className={`font-heading text-lg md:text-xl font-bold ${
                   isDark ? "text-offwhite" : "text-charcoal"
-                } hidden sm:block`}
+                } `}
               >
                 Khajuraho
               </span>
@@ -110,20 +133,40 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isDark
-                      ? "text-offwhite/80 hover:text-saffron hover:bg-white/5"
-                      : "text-charcoal/80 hover:text-indigo hover:bg-indigo/5"
-                  }`}
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.type === "route" ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      isDark
+                        ? "text-offwhite/80 hover:text-saffron hover:bg-white/5"
+                        : "text-charcoal/80 hover:text-indigo hover:bg-indigo/5"
+                    } ${
+                      location.pathname === link.href
+                        ? isDark
+                          ? "text-saffron"
+                          : "text-indigo"
+                        : ""
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      isDark
+                        ? "text-offwhite/80 hover:text-saffron hover:bg-white/5"
+                        : "text-charcoal/80 hover:text-indigo hover:bg-indigo/5"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
             </div>
 
             {/* Right Section */}
@@ -240,20 +283,41 @@ const Navbar = ({ isDark, toggleTheme }) => {
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                  isDark
-                    ? "text-offwhite hover:bg-white/10 hover:text-saffron"
-                    : "text-charcoal hover:bg-indigo/10 hover:text-indigo"
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.type === "route" ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                    isDark
+                      ? "text-offwhite hover:bg-white/10 hover:text-saffron"
+                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo"
+                  } ${
+                    location.pathname === link.href
+                      ? isDark
+                        ? "text-saffron"
+                        : "text-indigo"
+                      : ""
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                    isDark
+                      ? "text-offwhite hover:bg-white/10 hover:text-saffron"
+                      : "text-charcoal hover:bg-indigo/10 hover:text-indigo"
+                  }`}
+                >
+                  {link.name}
+                </a>
+              )
+            )}
             <a
               href="#register"
               onClick={(e) => scrollToSection(e, "#register")}

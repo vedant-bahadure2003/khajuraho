@@ -8,7 +8,7 @@ const ArtistCard = ({ artist, isDark, index }) => {
   return (
     <div
       ref={elementRef}
-      className={`group relative overflow-hidden rounded-2xl transition-all duration-500 ${
+      className={`group relative overflow-hidden rounded-2xl transition-all duration-500 flex-shrink-0 w-[70vw] sm:w-auto snap-center ${
         hasIntersected
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-10"
@@ -149,7 +149,8 @@ const Artists = ({ isDark, festivalData }) => {
               isDark ? "text-offwhite" : "text-charcoal"
             }`}
           >
-            Meet the <span className="gradient-text">Artists</span>
+            Meet the{" "}
+            <span className="gradient-text">Celebrities & Artists</span>
           </h2>
           <p
             className={`max-w-2xl mx-auto text-lg ${
@@ -161,8 +162,8 @@ const Artists = ({ isDark, festivalData }) => {
           </p>
         </div>
 
-        {/* Artists Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Artists Grid - Horizontal scroll on mobile, grid on larger screens */}
+        <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:overflow-visible sm:pb-0">
           {allArtists.map((artist, index) => (
             <ArtistCard
               key={`${artist.artist}-${index}`}

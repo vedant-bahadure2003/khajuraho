@@ -1,4 +1,4 @@
-import { useIntersectionObserver } from "../hooks";
+import { useIntersectionObserver } from "../../hooks";
 
 const Gallery = ({ isDark }) => {
   const { hasIntersected, elementRef } = useIntersectionObserver({
@@ -22,7 +22,7 @@ const Gallery = ({ isDark }) => {
       span: "",
     },
     {
-      src: "https://images.unsplash.com/photo-1564429238881-b2e7a6d73048?w=600&h=600&fit=crop",
+      src: "https://imgs.search.brave.com/f7zpve8eYmf2e-ML59dSY8ng5E_2dGpOA4RoNw7T68A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjIw/MzU2NDI0Ni9waG90/by9maXJlLWNlcmVt/b255LWF0LWhpbmR1/LWZlc3RpdmFsLWlu/LXZhcmFuYXNpLWF0/LW5pZ2h0LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1icjBl/SXdtTEgzam9tR09L/bXBTaWp1ekk4RlNQ/cE5JRUdPUUJ0emtj/TXNZPQ",
       alt: "Festival crowd",
       span: "",
     },
@@ -42,7 +42,7 @@ const Gallery = ({ isDark }) => {
     <section
       id="gallery"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20 md:py-10 overflow-hidden theme-transition ${
         isDark ? "bg-dark-bg" : "bg-offwhite"
       }`}
     >

@@ -48,7 +48,7 @@
           "artist": "Pandit Birju Maharaj Troupe",
           "form": "Kathak",
           "bio": "Disciples of the legendary Pandit Birju Maharaj presenting traditional Lucknow gharana Kathak.",
-          "thumbnail": "/artists/artist2.webp"
+          "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Pandit_Birju_Maharaj.jpg"
         }
       ]
     },
@@ -58,24 +58,24 @@
       "events": [
         {
           "time": "6:30 PM",
-          "artist": "Aruna Mohanty",
-          "form": "Odissi",
+          "artist": "Terence Lewis",
+          "form": "Dancer & Judge",
           "bio": "National Award winner known for her innovative choreography and devotional expressions in Odissi.",
-          "thumbnail": "/artists/artist3.webp"
+          "thumbnail": "https://cdn.starclinch.in/artist/terence-lewis/terence-lewis.png"
         },
         {
           "time": "7:45 PM",
           "artist": "Bimbavati Devi",
           "form": "Manipuri",
           "bio": "Sangeet Natak Akademi awardee, preserving the delicate grace of Manipuri Ras Lila traditions.",
-          "thumbnail": "/artists/artist4.webp"
+          "thumbnail": "https://live.staticflickr.com/1169/1348497412_f832d770cb_o.jpg"
         },
         {
           "time": "9:00 PM",
-          "artist": "Sharmila Biswas",
-          "form": "Odissi",
+          "artist": "Prabhu Deva",
+          "form": "Dancer",
           "bio": "Acclaimed Odissi exponent known for her lyrical movements and dramatic interpretations.",
-          "thumbnail": "/artists/artist5.webp"
+          "thumbnail": "https://chiloka.com/i/i/p/r/a/prabhu-deva-2.JPG"
         }
       ]
     },
@@ -84,25 +84,25 @@
       "dayName": "Day 3 - Southern Heritage",
       "events": [
         {
-          "time": "6:30 PM",
-          "artist": "Priyadarshini Govind",
-          "form": "Bharatanatyam",
-          "bio": "Vice Chancellor of Tamil Nadu Music and Fine Arts University, renowned for her abhinaya expertise.",
-          "thumbnail": "/artists/artist6.webp"
+          "time": "7:45 PM",
+          "artist": "Madhuri Dixit",
+          "form": "Actress",
+          "bio": "Traditional Kuchipudi troupe presenting classical narratives from Andhra Pradesh.",
+          "thumbnail": "https://www.elahe.in/cdn/shop/files/77_d487542f-85fe-4072-b73f-2e38209fef63_2048x.jpg?v=1736416096"
         },
         {
-          "time": "7:45 PM",
-          "artist": "Kuchipudi Ensemble",
-          "form": "Kuchipudi",
-          "bio": "Traditional Kuchipudi troupe presenting classical narratives from Andhra Pradesh.",
-          "thumbnail": "/artists/artist7.webp"
+          "time": "6:30 PM",
+          "artist": "Amitabh Bachchan",
+          "form": "Actor",
+          "bio": "Vice Chancellor of Tamil Nadu Music and Fine Arts University, renowned for her abhinaya expertise.",
+          "thumbnail": "https://images.indianexpress.com/2024/10/Happy-birthday-Mr-Amitabh-Bachchan.jpg"
         },
         {
           "time": "9:00 PM",
-          "artist": "Sadanam Balakrishnan",
-          "form": "Kathakali",
+          "artist": "Salman Khan",
+          "form": "Actor",
           "bio": "Master Kathakali artist bringing Kerala's dramatic dance form with elaborate costumes and expressions.",
-          "thumbnail": "/artists/artist8.webp"
+          "thumbnail": "https://w0.peakpx.com/wallpaper/335/429/HD-wallpaper-salman-khan-tiger.jpg"
         }
       ]
     },
