@@ -283,6 +283,11 @@ const WhatsNew = ({ isDark }) => {
           </div>
         </div>
       </div>
+      <div
+        className={`absolute -top-32 -right-32 w-64 h-64 rounded-full blur-3xl ${
+          isDark ? "bg-neon-indigo/20" : "bg-saffron/10"
+        }`}
+      />
     </section>
   );
 };

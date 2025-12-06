@@ -38,7 +38,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Navigate rugged terrain on powerful ATVs through forest trails and open fields. Multiple track options available.",
         image:
-          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop",
+          "https://i.ytimg.com/vi/6oTJPKgJr-g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA2SdPGZj3LcrRtDFcNB_A_-ncB1Q",
         difficulty: "Easy-Hard",
         ageGroup: "16+ years",
         price: "₹1,200",
@@ -52,7 +52,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Test your balance and agility on suspended bridges, cargo nets, and wobbly platforms high above the ground.",
         image:
-          "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=500&h=400&fit=crop",
+          "https://images.stockcake.com/public/e/8/6/e8626d6d-0765-4fcd-94c5-cdd9f0e7d54e_large/jungle-bridge-crossing-stockcake.jpg",
         difficulty: "Moderate",
         ageGroup: "8+ years",
         price: "₹600",
@@ -66,7 +66,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Learn traditional archery techniques from expert instructors. Compete with friends at our professional range.",
         image:
-          "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&h=400&fit=crop",
+          "https://static.vecteezy.com/system/resources/thumbnails/019/784/249/original/archery-women-ready-for-shooting-an-arrow-when-she-hunting-in-the-jungle-free-video.jpg",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "₹400",
@@ -109,8 +109,7 @@ const AdventurePark = ({ isDark }) => {
         duration: "3-4 hours",
         description:
           "Explore Panna National Park, home to tigers, leopards, and 200+ bird species. Morning and evening safaris available.",
-        image:
-          "https://images.unsplash.com/photo-1549366021-9f761d450615?w=500&h=400&fit=crop",
+        image: "https://jungletrail.in/wp-content/uploads/2023/10/tieger5.jpg",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "₹2,500",
@@ -138,7 +137,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Trek to the mythical 30m waterfall in Panna where the Pandavas are said to have rested.",
         image:
-          "https://images.unsplash.com/photo-1546587348-d12660c30c50?w=500&h=400&fit=crop",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/cc/e5/05/beautiful-khajuraho.jpg?w=900&h=500&s=1",
         difficulty: "Moderate",
         ageGroup: "All ages",
         price: "₹50",
@@ -152,7 +151,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Enjoy boating and water sports at the 8km scenic dam. Perfect for photography and picnics.",
         image:
-          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+          "https://aktourandtourisum.com/public/frontassets/images/destination/1759334876.png",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "Free",
@@ -168,7 +167,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Guided tour of the magnificent Khajuraho temples with expert narration on architecture and sculptures.",
         image:
-          "https://images.unsplash.com/photo-1590123796529-e5c9a5fa5c4e?w=500&h=400&fit=crop",
+          "https://www.fabhotels.com/blog/wp-content/uploads/2019/05/Khajuraho_600.jpg",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "₹600",
@@ -182,7 +181,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Witness the temples come alive with a spectacular light show narrating the history of Chandela dynasty.",
         image:
-          "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=500&h=400&fit=crop",
+          "https://www.christiedigital.com/globalassets/press-releases/2025/khajuraho/khajuraho_slider1.jpg",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "₹250",
@@ -196,7 +195,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Trek to the hilltop fort at 688m with panoramic views of Vindhya ranges. Rich in Chandela history.",
         image:
-          "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500&h=400&fit=crop",
+          "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/22/4a/d4.jpg",
         difficulty: "Moderate",
         ageGroup: "12+ years",
         price: "Free",
@@ -210,7 +209,7 @@ const AdventurePark = ({ isDark }) => {
         description:
           "Explore rustic mud cottages, interact with locals, and experience authentic rural Indian lifestyle.",
         image:
-          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&h=400&fit=crop",
+          "https://www.travelersuniverse.com/wp-content/uploads/2025/08/khajuraho-private-city-tour-full-day-package.jpg",
         difficulty: "Easy",
         ageGroup: "All ages",
         price: "₹200",

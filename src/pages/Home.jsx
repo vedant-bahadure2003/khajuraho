@@ -27,7 +27,6 @@ const Home = ({ isDark, reducedMotion }) => {
         reducedMotion={reducedMotion}
       />
       <WhatsNew isDark={isDark} />
-      <About isDark={isDark} />
       <TalentHunt isDark={isDark} />
       <Artists isDark={isDark} festivalData={festivalData} />
       <Schedule isDark={isDark} festivalData={festivalData} />
@@ -36,6 +35,7 @@ const Home = ({ isDark, reducedMotion }) => {
       <FamousFood isDark={isDark} />
       <LocalMarket isDark={isDark} />
       <Visit isDark={isDark} festivalData={festivalData} />
+      <About isDark={isDark} />
       <Sponsors isDark={isDark} festivalData={festivalData} />
       {/* <Registration isDark={isDark} festivalData={festivalData} />
       <FAQs isDark={isDark} festivalData={festivalData} /> */}
