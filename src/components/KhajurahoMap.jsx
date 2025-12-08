@@ -263,7 +263,7 @@ const StreetViewModal = ({ place, onClose, isDark }) => {
   if (!place) return null;
 
   const [lat, lng] = place.coordinates;
-  
+
   // Google Maps location link
   const googleMapsLocationUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 
@@ -338,16 +338,26 @@ const StreetViewModal = ({ place, onClose, isDark }) => {
         />
 
         {/* Info overlay */}
-        <div className={`absolute top-20 left-4 right-4 p-4 rounded-xl backdrop-blur-md ${
-          isDark ? "bg-black/60 text-white" : "bg-white/80 text-gray-800"
-        }`}>
+        <div
+          className={`absolute top-20 left-4 right-4 p-4 rounded-xl backdrop-blur-md ${
+            isDark ? "bg-black/60 text-white" : "bg-white/80 text-gray-800"
+          }`}
+        >
           <p className="text-sm">
             <strong>📍 {place.name}</strong>
           </p>
-          <p className={`text-xs mt-1 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+          <p
+            className={`text-xs mt-1 ${
+              isDark ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             {place.description}
           </p>
-          <p className={`text-xs mt-2 ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+          <p
+            className={`text-xs mt-2 ${
+              isDark ? "text-gray-400" : "text-gray-500"
+            }`}
+          >
             Coordinates: {lat.toFixed(4)}, {lng.toFixed(4)}
           </p>
         </div>
@@ -524,7 +534,11 @@ const KhajurahoMap = ({ isDark }) => {
                   }}
                   className="w-full mt-2 py-2 px-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg text-xs font-medium transition-all flex items-center justify-center gap-2"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
                   </svg>
                   View Street View
@@ -613,7 +627,11 @@ const KhajurahoMap = ({ isDark }) => {
               onClick={() => setStreetViewPlace(selectedPlace)}
               className="flex-1 py-2 px-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg text-xs font-medium transition-all flex items-center justify-center gap-1"
             >
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-3.5 h-3.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
               </svg>
               Street View
