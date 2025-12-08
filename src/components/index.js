@@ -16,3 +16,7 @@ export { default as AdventurePark } from "./AdventurePark";
 export { default as Chetan } from "./Chetan";
 export { default as WhatsNew } from "./WhatsNew";
 export { default as TalentHunt } from "./TalentHunt";
+export { default as BecomeASponsor } from "./BecomeASponsor";
+export { default as Judges } from "./Judges";
+export { default as Highlights } from "./Highlights";
+export { default as KhajurahoMap } from "./KhajurahoMap";

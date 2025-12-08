@@ -11,11 +11,11 @@ const FamousFood = ({ isDark }) => {
   const streetScrollRef = useRef(null);
 
   const categories = [
-    { id: "all", label: "All Delights", icon: "🍽️" },
-    { id: "north", label: "North India", icon: "🏔️" },
-    { id: "south", label: "South India", icon: "🌴" },
-    { id: "street", label: "Street Food", icon: "🛒" },
-    { id: "sweets", label: "Sweets", icon: "🍮" },
+    { id: "all", label: "All Delights", icon: "" },
+    { id: "north", label: "North India", icon: "" },
+    { id: "south", label: "South India", icon: "" },
+    { id: "street", label: "Street Food", icon: "" },
+    { id: "sweets", label: "Sweets", icon: "" },
   ];
 
   const streetFoods = [
@@ -548,7 +548,6 @@ const FamousFood = ({ isDark }) => {
                   : "bg-orange-100 text-orange-600"
               }`}
             >
-              <span className="text-lg">🛒</span>
               Street Food Special
             </span>
             <h3

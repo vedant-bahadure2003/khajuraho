@@ -5,86 +5,76 @@ const About = ({ isDark }) => {
     threshold: 0.1,
   });
 
-  const highlights = [
+  const historyItems = [
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M3 21h18M9 21V9l3-3 3 3v12M9 21h6M5 21V7l7-4 7 4v14"
-          />
-        </svg>
-      ),
-      title: "UNESCO Heritage Backdrop",
-      description:
-        "Performances against the magnificent 1000-year-old Chandela temples, a UNESCO World Heritage Site.",
+      title: "Origins & Architecture (9th–12th century)",
+      content:
+        "Khajuraho was created under the Chandela dynasty. The temples—built between the 9th and 12th centuries—are celebrated for intricate Nagara-style architecture and richly carved stone sculptures.",
+      accent: "saffron",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      title: "8 Classical Dance Forms",
-      description:
-        "Witness Bharatanatyam, Kathak, Odissi, Kuchipudi, Manipuri, Kathakali, Mohiniyattam, and Sattriya.",
+      title: "Golden Age — Chandela Patrons (c. 950–1050 CE)",
+      content:
+        "The Chandela kings commissioned close to 85 temples (25 survive). Sculptors carved deities, dancers, musicians and daily life — presenting a holistic view of spirituality and human experience.",
+      accent: "sandstone",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
-      title: "Family-Friendly Event",
-      description:
-        "A celebration for all ages with workshops, cultural stalls, and evening performances.",
+      title: "Symbolism & Sculptural Art",
+      content:
+        "Temples express the unity of life and devotion. Śṛṅgāra (sensual) motifs are iconic — representing life-energy and spiritual awakening rather than mere erotica.",
+      accent: "indigo",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-          />
-        </svg>
-      ),
-      title: "World-Renowned Artists",
+      title: "Decline, Rediscovery & UNESCO Listing",
+      content:
+        "After the 13th century Khajuraho fell into obscurity. Rediscovered by British surveyors in the 19th century, it was later conserved and designated a UNESCO World Heritage Site in 1986.",
+      accent: "saffron",
+    },
+    {
+      title: "Dance & Living Traditions",
+      content:
+        "Khajuraho's sculpted dancers inspired living traditions. Performers for centuries have looked to the temple poses for artistic reference — making Khajuraho a natural stage for classical dance.",
+      accent: "sandstone",
+    },
+  ];
+
+  const festivalInfo = {
+    mainTitle: "Khajuraho Dance Festival — From Revival to Reverence",
+    mainContent:
+      "Launched in the 1970s as a cultural revival initiative, the festival brings classical dance to the illuminated temple backdrop — turning carved stone into an active stage for living art.",
+    whyMatters: {
+      title: "Why the Festival Matters",
+      content:
+        "It reconnects sculpture and performance — reviving techniques, encouraging new artists, and making Khajuraho a global hub for classical dance.",
+    },
+    evolution: {
+      title: "Evolution Over Time",
+      items: [
+        "1970s — Government-supported revival celebrating temple arts.",
+        "1990s–2000s — Inclusion of workshops, exhibitions and rising artists.",
+        "2010s — Growth in digital outreach, international guests and broader programming.",
+      ],
+    },
+  };
+
+  const newEra2026 = [
+    {
+      icon: "🏛️",
+      title: "UNESCO-stage Competition",
       description:
-        "Performances by Padma Shri and Sangeet Natak Akademi award-winning maestros.",
+        "Selected finalists perform at a World Heritage site under conservation oversight.",
+    },
+    {
+      icon: "🎬",
+      title: "Open Call & Wildcard Entry",
+      description:
+        "Any eligible artist may apply via video — judges can award wildcard passes to outstanding acts.",
+    },
+    {
+      icon: "⭐",
+      title: "Share the Stage with Legends",
+      description:
+        "Finalists may be invited to perform alongside headline artists during the main festival.",
     },
   ];
 
@@ -92,17 +82,19 @@ const About = ({ isDark }) => {
     <section
       id="about"
       ref={elementRef}
-      className={`relative py-20  overflow-hidden theme-transition ${
+      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
         isDark ? "bg-dark-bg" : "bg-offwhite"
       }`}
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-[0.03]">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23C89B67' fill-opacity='0.4'/%3E%3C/svg%3E")`,
-            backgroundSize: "60px 60px",
+            backgroundImage: `radial-gradient(circle at 2px 2px, ${
+              isDark ? "#C89B67" : "#2B2A7B"
+            } 1px, transparent 0)`,
+            backgroundSize: "32px 32px",
           }}
         />
       </div>
@@ -121,194 +113,229 @@ const About = ({ isDark }) => {
               isDark ? "bg-saffron/20 text-saffron" : "bg-indigo/10 text-indigo"
             }`}
           >
-            Since 1975
+            Heritage & History
           </span>
           <h2
             className={`font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${
               isDark ? "text-offwhite" : "text-charcoal"
             }`}
           >
-            A Legacy of <span className="gradient-text">Living Art</span>
+            Khajuraho:{" "}
+            <span className="gradient-text">A Thousand Years of Culture</span>
           </h2>
           <p
-            className={`max-w-2xl mx-auto text-lg ${
+            className={`max-w-4xl mx-auto text-lg ${
               isDark ? "text-offwhite/70" : "text-charcoal/70"
             }`}
           >
-            Celebrating 50 glorious years of India's premier classical dance
-            festival, where ancient temples become the stage for timeless
-            traditions.
+            From masterful stone sculptures to living performance traditions — a
+            short history of Khajuraho and the evolution of the Khajuraho Dance
+            Festival, now entering a bold new era.
           </p>
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
-          {/* Left - Story */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column - History Timeline */}
           <div
-            className={`space-y-6 transition-all duration-700 delay-200 ${
+            className={`space-y-4 transition-all duration-700 delay-100 ${
               hasIntersected
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <h3
-              className={`font-heading text-2xl md:text-3xl font-bold ${
-                isDark ? "text-offwhite" : "text-charcoal"
-              }`}
-            >
-              The Sacred Stage
-            </h3>
-            <div
-              className={`space-y-4 text-base md:text-lg text-justify leading-relaxed ${
-                isDark ? "text-offwhite/80" : "text-charcoal/80"
-              }`}
-            >
-              <p>
-                Inaugurated in 1975, the Khajuraho Dance Festival transforms the
-                historic temple complex into an open-air theatre of unparalleled
-                grandeur. Against the backdrop of intricately carved sandstone
-                temples, India's finest classical dancers bring ancient stories
-                to life.
-              </p>
-              <p>
-                The festival coincides with the magical week of Maha Shivaratri,
-                when the temples are illuminated and the air is filled with
-                devotion. This unique confluence of art, spirituality, and
-                heritage creates an experience unlike any other.
-              </p>
-              <p>
-                Each year, thousands of art lovers, tourists, and cultural
-                enthusiasts gather to witness this spectacular celebration of
-                India's intangible cultural heritage.
-              </p>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-6">
-              {[
-                { value: "50+", label: "Years of Legacy" },
-                { value: "100+", label: "Artists Annually" },
-                { value: "50K+", label: "Visitors Each Year" },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className={`text-center p-4 rounded-xl ${
-                    isDark ? "bg-white/5" : "bg-indigo/5"
-                  }`}
-                >
-                  <div className="font-heading text-2xl md:text-3xl font-bold gradient-text">
-                    {stat.value}
-                  </div>
-                  <div
-                    className={`text-xs md:text-sm mt-1 ${
-                      isDark ? "text-offwhite/60" : "text-charcoal/60"
-                    }`}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+            {historyItems.map((item, index) => (
+              <HistoryCard
+                key={index}
+                item={item}
+                isDark={isDark}
+                index={index}
+              />
+            ))}
           </div>
 
-          {/* Right - Image Grid */}
+          {/* Right Column - Festival Info */}
           <div
-            className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${
+            className={`space-y-6 transition-all duration-700 delay-200 ${
               hasIntersected
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="space-y-4">
-              <div
-                className={`aspect-[4/5] rounded-2xl overflow-hidden ${
-                  isDark ? "glow-gold" : "shadow-xl"
+            {/* Main Festival Card */}
+            <div
+              className={`rounded-2xl p-6 ${
+                isDark
+                  ? "bg-white/5 border border-white/10"
+                  : "bg-white shadow-lg"
+              }`}
+            >
+              <h3
+                className={`font-heading text-xl md:text-2xl font-bold mb-4 ${
+                  isDark ? "text-saffron" : "text-indigo"
                 }`}
               >
-                <img
-                  src="https://images.unsplash.com/photo-1545987796-200677ee1011?w=400&h=500&fit=crop"
-                  alt="Classical dance performance"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div
-                className={`aspect-square rounded-2xl overflow-hidden ${
-                  isDark ? "border border-gold-glow/30" : "shadow-lg"
+                {festivalInfo.mainTitle}
+              </h3>
+              <p
+                className={`text-sm md:text-base leading-relaxed ${
+                  isDark ? "text-offwhite/80" : "text-charcoal/80"
                 }`}
               >
-                <img
-                  src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=400&fit=crop"
-                  alt="Temple architecture"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
+                {festivalInfo.mainContent}
+              </p>
+            </div>
+
+            {/* Why It Matters */}
+            <div
+              className={`rounded-2xl p-6 ${
+                isDark
+                  ? "bg-white/5 border border-white/10"
+                  : "bg-white shadow-lg"
+              }`}
+            >
+              <h4
+                className={`font-heading text-lg font-bold mb-3 ${
+                  isDark ? "text-offwhite" : "text-charcoal"
+                }`}
+              >
+                {festivalInfo.whyMatters.title}
+              </h4>
+              <p
+                className={`text-sm leading-relaxed ${
+                  isDark ? "text-offwhite/70" : "text-charcoal/70"
+                }`}
+              >
+                {festivalInfo.whyMatters.content}
+              </p>
+            </div>
+
+            {/* Evolution Timeline */}
+            <div
+              className={`rounded-2xl p-6 ${
+                isDark
+                  ? "bg-white/5 border border-white/10"
+                  : "bg-white shadow-lg"
+              }`}
+            >
+              <h4
+                className={`font-heading text-lg font-bold mb-4 ${
+                  isDark ? "text-offwhite" : "text-charcoal"
+                }`}
+              >
+                {festivalInfo.evolution.title}
+              </h4>
+              <div className="space-y-3">
+                {festivalInfo.evolution.items.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-start gap-3 text-sm ${
+                      isDark ? "text-offwhite/70" : "text-charcoal/70"
+                    }`}
+                  >
+                    <div
+                      className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                        isDark ? "bg-saffron" : "bg-indigo"
+                      }`}
+                    />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="space-y-4 pt-8">
+
+            {/* 2026 New Era Card */}
+            <div
+              className={`rounded-2xl p-6 relative overflow-hidden ${
+                isDark
+                  ? "bg-gradient-to-br from-saffron/20 to-indigo/20 border border-saffron/30"
+                  : "bg-gradient-to-br from-indigo/10 to-saffron/10 border border-indigo/20"
+              }`}
+            >
+              {/* Decorative glow */}
               <div
-                className={`aspect-square rounded-2xl overflow-hidden ${
-                  isDark ? "border border-gold-glow/30" : "shadow-lg"
+                className={`absolute -top-20 -right-20 w-40 h-40 rounded-full blur-3xl ${
+                  isDark ? "bg-saffron/20" : "bg-indigo/20"
                 }`}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=400&h=400&fit=crop"
-                  alt="Traditional dance pose"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div
-                className={`aspect-[4/5] rounded-2xl overflow-hidden ${
-                  isDark ? "glow-gold" : "shadow-xl"
-                }`}
-              >
-                <img
-                  src="https://imgs.search.brave.com/X5SvdZWPl_oKH27x9No5qcHW5TTP7_FmCBWFlKSJeBU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGhlcXVpbnQu/Y29tL3RoZXF1aW50/LzIwMTgtMDQvOTg1/ODZiZTgtNjRhMy00/ZDY3LTkzYjgtZWY1/MWZlOTQ1YjY4L0to/YWp1cmFob19kYW5j/ZV8xLmpwZz9hdXRv/PWZvcm1hdCxjb21w/cmVzcyZmbXQ9d2Vi/cCZ3aWR0aD03MjAm/dz0xMjAw"
-                  alt="Festival celebration"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
+              />
+
+              <div className="relative">
+                <h4
+                  className={`font-heading text-2xl font-bold mb-6 ${
+                    isDark ? "text-saffron" : "text-indigo"
+                  }`}
+                >
+                  2026 — The New Era
+                </h4>
+
+                <div className="space-y-5">
+                  {newEra2026.map((item, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div
+                        className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-lg ${
+                          isDark
+                            ? "bg-saffron/30 text-saffron"
+                            : "bg-indigo/20 text-indigo"
+                        }`}
+                      >
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h5
+                          className={`font-semibold text-sm mb-1 ${
+                            isDark ? "text-offwhite" : "text-charcoal"
+                          }`}
+                        >
+                          {item.title}
+                        </h5>
+                        <p
+                          className={`text-xs leading-relaxed ${
+                            isDark ? "text-offwhite/60" : "text-charcoal/60"
+                          }`}
+                        >
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Highlights Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item, index) => (
+        {/* Bottom Stats Bar */}
+        <div
+          className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-700 delay-400 ${
+            hasIntersected
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          {[
+            { value: "1000+", label: "Years of History" },
+            { value: "25", label: "Surviving Temples" },
+            { value: "1986", label: "UNESCO Listed" },
+            { value: "50+", label: "Festival Editions" },
+          ].map((stat, index) => (
             <div
               key={index}
-              className={`group p-6 rounded-2xl transition-all duration-500 hover:scale-105 ${
-                hasIntersected
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              } ${
+              className={`text-center p-5 rounded-2xl transition-all duration-300 hover:scale-105 ${
                 isDark
-                  ? "bg-white/5 hover:bg-white/10 border border-white/10 hover:border-saffron/30"
-                  : "bg-white hover:bg-indigo/5 shadow-lg hover:shadow-xl"
+                  ? "bg-white/5 border border-white/10 hover:border-saffron/30"
+                  : "bg-white shadow-lg hover:shadow-xl"
               }`}
-              style={{ transitionDelay: `${400 + index * 100}ms` }}
             >
-              <div
-                className={`inline-flex p-3 rounded-xl mb-4 transition-all duration-300 group-hover:scale-110 ${
-                  isDark
-                    ? "bg-saffron/20 text-saffron"
-                    : "bg-indigo/10 text-indigo group-hover:bg-saffron/20 group-hover:text-saffron"
-                }`}
-              >
-                {item.icon}
+              <div className="font-heading text-2xl md:text-3xl font-bold gradient-text">
+                {stat.value}
               </div>
-              <h4
-                className={`font-heading text-lg font-bold mb-2 ${
-                  isDark ? "text-offwhite" : "text-charcoal"
-                }`}
-              >
-                {item.title}
-              </h4>
-              <p
-                className={`text-sm ${
+              <div
+                className={`text-xs md:text-sm mt-1 ${
                   isDark ? "text-offwhite/60" : "text-charcoal/60"
                 }`}
               >
-                {item.description}
-              </p>
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
@@ -316,16 +343,52 @@ const About = ({ isDark }) => {
 
       {/* Decorative Elements */}
       <div
-        className={`absolute top-20 right-0 w-64 h-64 rounded-full blur-3xl ${
-          isDark ? "bg-indigo/20" : "bg-saffron/10"
+        className={`absolute top-40 right-0 w-72 h-72 rounded-full blur-3xl pointer-events-none ${
+          isDark ? "bg-indigo/10" : "bg-saffron/10"
         }`}
       />
       <div
-        className={`absolute bottom-20 left-0 w-64 h-64 rounded-full blur-3xl ${
+        className={`absolute bottom-40 left-0 w-72 h-72 rounded-full blur-3xl pointer-events-none ${
           isDark ? "bg-saffron/10" : "bg-indigo/10"
         }`}
       />
     </section>
+  );
+};
+
+const HistoryCard = ({ item, isDark, index }) => {
+  const accentColors = {
+    saffron: isDark ? "border-l-saffron" : "border-l-saffron",
+    sandstone: isDark ? "border-l-sandstone" : "border-l-sandstone",
+    indigo: isDark ? "border-l-indigo" : "border-l-indigo",
+  };
+
+  return (
+    <div
+      className={`rounded-xl p-5 border-l-4 transition-all duration-300 hover:scale-[1.02] ${
+        accentColors[item.accent]
+      } ${
+        isDark
+          ? "bg-white/5 hover:bg-white/10"
+          : "bg-white shadow-md hover:shadow-lg"
+      }`}
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <h4
+        className={`font-heading text-base md:text-lg font-bold mb-2 ${
+          isDark ? "text-offwhite" : "text-charcoal"
+        }`}
+      >
+        {item.title}
+      </h4>
+      <p
+        className={`text-sm leading-relaxed ${
+          isDark ? "text-offwhite/70" : "text-charcoal/70"
+        }`}
+      >
+        {item.content}
+      </p>
+    </div>
   );
 };
 

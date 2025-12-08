@@ -76,7 +76,7 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
     <section
       id="hero"
       ref={elementRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden   "
+      className="relative min-h-screen flex items-center justify-center overflow-hidden shadow-lg shadow-gray-400 mb-5 "
     >
       {/* Background Image with Parallax */}
       <div

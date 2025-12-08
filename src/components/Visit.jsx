@@ -1,4 +1,5 @@
 import { useIntersectionObserver } from "../hooks";
+import KhajurahoMap from "./KhajurahoMap";
 
 const Visit = ({ isDark, festivalData }) => {
   const { hasIntersected, elementRef } = useIntersectionObserver({
@@ -51,7 +52,75 @@ const Visit = ({ isDark, festivalData }) => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Interactive 3D Map Section */}
+        <div
+          className={`mb-12 rounded-2xl overflow-hidden transition-all duration-700 delay-150 ${
+            hasIntersected
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          } ${isDark ? "border border-white/10" : "shadow-2xl"}`}
+        >
+          <div className="h-[500px] md:h-[600px] relative">
+            <KhajurahoMap isDark={isDark} />
+          </div>
+          <div
+            className={`p-4 ${
+              isDark
+                ? "bg-white/5"
+                : "bg-gradient-to-r from-indigo/5 to-saffron/5"
+            }`}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p
+                  className={`font-semibold text-lg ${
+                    isDark ? "text-offwhite" : "text-charcoal"
+                  }`}
+                >
+                  🗺️ Explore Khajuraho in 3D
+                </p>
+                <p
+                  className={`text-sm ${
+                    isDark ? "text-offwhite/60" : "text-charcoal/60"
+                  }`}
+                >
+                  Click markers to discover temples, parks, hotels & attractions
+                </p>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    isDark
+                      ? "bg-saffron/20 text-saffron"
+                      : "bg-saffron/10 text-saffron"
+                  }`}
+                >
+                  🛕 Temples
+                </span>
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    isDark
+                      ? "bg-emerald-500/20 text-emerald-400"
+                      : "bg-emerald-500/10 text-emerald-600"
+                  }`}
+                >
+                  🐅 Wildlife
+                </span>
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    isDark
+                      ? "bg-blue-500/20 text-blue-400"
+                      : "bg-blue-500/10 text-blue-600"
+                  }`}
+                >
+                  🏨 Hotels
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Date & Weather Card */}
           <div
             className={`rounded-2xl p-6 transition-all duration-700 delay-100 ${
@@ -164,48 +233,6 @@ const Visit = ({ isDark, festivalData }) => {
               >
                 {travelInfo?.weather?.recommendation}
               </p>
-            </div>
-          </div>
-
-          {/* Map Card */}
-          <div
-            className={`rounded-2xl overflow-hidden transition-all duration-700 delay-200 ${
-              hasIntersected
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            } ${isDark ? "border border-white/10" : "shadow-xl"}`}
-          >
-            <div className="aspect-video lg:aspect-auto lg:h-full min-h-[300px] relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.507894686391!2d79.9193!3d24.8318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e2d1d5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sWestern%20Group%20of%20Temples%2C%20Khajuraho!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0, position: "absolute", inset: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Khajuraho Temple Location"
-              />
-              <div
-                className={`absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t ${
-                  isDark ? "from-dark-bg" : "from-white"
-                }`}
-              >
-                <p
-                  className={`font-semibold ${
-                    isDark ? "text-offwhite" : "text-charcoal"
-                  }`}
-                >
-                  Western Group of Temples
-                </p>
-                <p
-                  className={`text-sm ${
-                    isDark ? "text-offwhite/60" : "text-charcoal/60"
-                  }`}
-                >
-                  Khajuraho, Madhya Pradesh 471606
-                </p>
-              </div>
             </div>
           </div>
 

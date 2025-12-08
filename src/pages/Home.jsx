@@ -15,6 +15,9 @@ import {
   Chetan,
   WhatsNew,
   TalentHunt,
+  BecomeASponsor,
+  Judges,
+  Highlights,
 } from "../components";
 import festivalData from "../data/festivalData.json";
 
@@ -28,15 +31,19 @@ const Home = ({ isDark, reducedMotion }) => {
       />
       <WhatsNew isDark={isDark} />
       <TalentHunt isDark={isDark} />
+      <Judges isDark={isDark} />
       <Artists isDark={isDark} festivalData={festivalData} />
-      <Schedule isDark={isDark} festivalData={festivalData} />
+      <BecomeASponsor isDark={isDark} />
+      <Highlights isDark={isDark} />
       <Explore isDark={isDark} />
       <AdventurePark isDark={isDark} />
       <FamousFood isDark={isDark} />
       <LocalMarket isDark={isDark} />
-      <Visit isDark={isDark} festivalData={festivalData} />
       <About isDark={isDark} />
+      <Schedule isDark={isDark} festivalData={festivalData} />
+      <Visit isDark={isDark} festivalData={festivalData} />
       <Sponsors isDark={isDark} festivalData={festivalData} />
+
       {/* <Registration isDark={isDark} festivalData={festivalData} />
       <FAQs isDark={isDark} festivalData={festivalData} /> */}
       {/* <Chetan isDark={isDark} /> */}
