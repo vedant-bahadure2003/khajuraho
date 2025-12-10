@@ -234,7 +234,7 @@ const Gallery = ({ isDark }) => {
     <section
       id="gallery"
       ref={elementRef}
-      className={`relative min-h-screen py-16 md:py-24 overflow-hidden theme-transition ${
+      className={`relative min-h-screen py-16  overflow-hidden theme-transition ${
         isDark ? "bg-dark-bg" : "bg-offwhite"
       }`}
     >
@@ -311,7 +311,7 @@ const Gallery = ({ isDark }) => {
           </div>
 
           <h1
-            className={`font-heading text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight ${
+            className={`font-heading text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight ${
               isDark ? "text-offwhite" : "text-charcoal"
             }`}
           >
