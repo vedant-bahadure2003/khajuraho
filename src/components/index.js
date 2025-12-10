@@ -20,3 +20,4 @@ export { default as BecomeASponsor } from "./BecomeASponsor";
 export { default as Judges } from "./Judges";
 export { default as Highlights } from "./Highlights";
 export { default as KhajurahoMap } from "./KhajurahoMap";
+export { default as BottomBar } from "./BottomBar";

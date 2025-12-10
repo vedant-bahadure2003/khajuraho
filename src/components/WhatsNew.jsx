@@ -7,7 +7,7 @@ const WhatsNew = ({ isDark }) => {
 
   const heroFeature = {
     image:
-      "https://luxevista.in/wp-content/uploads/2025/05/Khajuraho-Temples-%E2%80%93-History-Architecture.png",
+      "https://www.swantour.com/blogs/wp-content/uploads/2018/03/Khajuraho-Temples.jpg",
     badge: "HISTORIC FIRST — UNESCO",
     title:
       "First Time in History — Dance Competition at a UNESCO World Heritage Site",
@@ -32,7 +32,8 @@ const WhatsNew = ({ isDark }) => {
     },
     {
       id: 2,
-      image: "https://i.ytimg.com/vi/pgzaTnJT2ds/maxresdefault.jpg",
+      image:
+        "https://cdn.bollywoodbubble.com/wp-content/uploads/2022/06/Nora-Fatehis-IIFA-2022-performance.jpg",
       badge: "Celebrity • Community",
       title: "Celebrity + Community Performance Format",
       description:

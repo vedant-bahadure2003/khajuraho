@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useTheme, useReducedMotion } from "./hooks";
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer, BottomBar } from "./components";
 import Home from "./pages/Home";
 import GalleryPage from "./pages/Gallery";
 import festivalData from "./data/festivalData.json";
@@ -28,6 +28,7 @@ function App() {
       </main>
 
       <Footer isDark={isDark} festivalData={festivalData} />
+      <BottomBar isDark={isDark} />
     </div>
   );
 }

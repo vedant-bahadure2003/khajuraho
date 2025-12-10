@@ -78,7 +78,7 @@ const Footer = ({ isDark, festivalData }) => {
     <footer
       id="contact"
       ref={elementRef}
-      className={`relative pt-20 pb-8 overflow-hidden theme-transition ${
+      className={`relative pt-20 pb-20 overflow-hidden theme-transition ${
         isDark ? "bg-charcoal" : "bg-indigo"
       }`}
     >

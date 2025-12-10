@@ -5,24 +5,24 @@ const BecomeASponsor = ({ isDark }) => {
     threshold: 0.1,
   });
 
-  const stats = [
-    {
-      title: "Projected Onsite Reach",
-      value: "20K",
-      description: "Festival attendees, workshops & tourist footfall",
-    },
-    {
-      title: "Digital & Broadcast Reach",
-      value: "2000K",
-      description:
-        "Livestream viewers, social impressions & short-form content",
-    },
-    {
-      title: "Audience Profile",
-      value: "Culture • Travel • Youth",
-      description: "Cultural enthusiasts, arts patrons, tourists & creators",
-    },
-  ];
+  // const stats = [
+  //   {
+  //     title: "Projected Onsite Reach",
+  //     value: "20K",
+  //     description: "Festival attendees, workshops & tourist footfall",
+  //   },
+  //   {
+  //     title: "Digital & Broadcast Reach",
+  //     value: "2000K",
+  //     description:
+  //       "Livestream viewers, social impressions & short-form content",
+  //   },
+  //   {
+  //     title: "Audience Profile",
+  //     value: "Culture • Travel • Youth",
+  //     description: "Cultural enthusiasts, arts patrons, tourists & creators",
+  //   },
+  // ];
 
   const benefits = [
     {
@@ -111,7 +111,7 @@ const BecomeASponsor = ({ isDark }) => {
     <section
       id="become-sponsor"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-b from-dark-bg via-indigo/5 to-dark-bg"
           : "bg-gradient-to-b from-offwhite via-white to-offwhite"
@@ -272,7 +272,7 @@ const BecomeASponsor = ({ isDark }) => {
         </div>
 
         {/* Stats Grid */}
-        <div
+        {/* <div
           className={`grid md:grid-cols-3 gap-6 mb-16 transition-all duration-700 delay-200 ${
             hasIntersected
               ? "opacity-100 translate-y-0"
@@ -311,7 +311,7 @@ const BecomeASponsor = ({ isDark }) => {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Benefits Section */}
         <div

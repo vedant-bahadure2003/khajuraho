@@ -13,7 +13,7 @@ const FAQs = ({ isDark, festivalData }) => {
     <section
       id="faqs"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20 overflow-hidden theme-transition ${
         isDark ? "bg-dark-bg" : "bg-white"
       }`}
     >

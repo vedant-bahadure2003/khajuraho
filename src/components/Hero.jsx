@@ -1,31 +1,41 @@
 import { useState, useEffect, useMemo } from "react";
 import { useScrollParallax } from "../hooks";
 
-const Hero = ({ isDark, festivalData, reducedMotion }) => {
-  const [currentTagline, setCurrentTagline] = useState(0);
+const Hero = ({ isDark, reducedMotion }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [previousSlide, setPreviousSlide] = useState(null);
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const { offset, elementRef } = useScrollParallax(0.3, 8);
 
-  const taglines = useMemo(
-    () =>
-      festivalData?.taglines || [
-        "A RICH TRADITION OF INDIA WITH YOUTH OF INDIA 2026",
-        "Where Temples Meet Rhythm",
-        "Classical Dance Under Temple Lights",
-        "A Week of India's Living Traditions",
-      ],
-    [festivalData?.taglines]
+  // Slides data with images and taglines
+  const slides = useMemo(
+    () => [
+      {
+        image: "/images/banner-image.png",
+        // "https://khajurahodancefestival.com/slider/kdf-sl-3.png",
+        // "https://theunstumbled.com/wp-content/uploads/2025/02/khajuraho-dance-festival.jpg",
+        tagline: "A RICH TRADITION OF INDIA WITH YOUTH OF INDIA 2026",
+      },
+      {
+        image: "/images/banner-image2.png",
+        // "https://russianbellydancers.com/wp-content/uploads/2025/04/1614281427Copy-of-Karishma-Tanna-performing-for-Mahindra-Tractors-Annual-Dealers-Meet-in-Mumbai.png",
+        // "https://cloudfront-us-east-1.images.arcpublishing.com/ajc/QZ3RZGHVD5CTHFWVFORVT2QHGY.jpg",
+        tagline:
+          "First Time in History - Dance Competition at a UNESCO World Heritage Site",
+      },
+    ],
+    []
   );
 
-  // Typewriter effect
+  // Typewriter effect with slide sync
   useEffect(() => {
     if (reducedMotion) {
-      setDisplayText(taglines[currentTagline]);
+      setDisplayText(slides[currentSlide].tagline);
       return;
     }
 
-    const currentText = taglines[currentTagline];
+    const currentText = slides[currentSlide].tagline;
     let charIndex = 0;
     setDisplayText("");
     setIsTyping(true);
@@ -38,14 +48,22 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
         clearInterval(typeInterval);
         setIsTyping(false);
 
+        // Wait, then transition to next slide
         setTimeout(() => {
-          setCurrentTagline((prev) => (prev + 1) % taglines.length);
-        }, 3000);
+          setCurrentSlide((prev) => {
+            setPreviousSlide(prev);
+            return (prev + 1) % slides.length;
+          });
+          // Clear previous slide after transition completes
+          setTimeout(() => {
+            setPreviousSlide(null);
+          }, 1000); // Match transition duration
+        }, 1000);
       }
     }, 50);
 
     return () => clearInterval(typeInterval);
-  }, [currentTagline, taglines, reducedMotion]);
+  }, [currentSlide, slides, reducedMotion]);
 
   // Generate floating petals
   const petals = useMemo(() => {
@@ -78,31 +96,72 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
       ref={elementRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden shadow-lg shadow-gray-400 mb-5 "
     >
-      {/* Background Image with Parallax */}
+      {/* Background Images Slideshow with Crossfade */}
       <div
-        className="absolute inset-0 z-0 "
+        className="absolute inset-0 z-0 bg-charcoal"
         style={{
           transform: reducedMotion ? "none" : `translateY(${offset}px)`,
         }}
       >
-        <img
-          src="https://theunstumbled.com/wp-content/uploads/2025/02/khajuraho-dance-festival.jpg"
-          alt="Khajuraho Dance Festival backdrop with illuminated temples"
-          className="w-full h-full object-cover scale-105 "
-          loading="eager"
-        />
+        {/* Render all slides for smooth crossfade - stacked with proper z-index */}
+        {slides.map((slide, index) => {
+          const isActive = index === currentSlide;
+          const isPrevious = index === previousSlide;
+
+          return (
+            <div
+              key={index}
+              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+              style={{
+                opacity: isActive || isPrevious ? 1 : 0,
+                zIndex: isActive ? 2 : isPrevious ? 1 : 0,
+              }}
+            >
+              <img
+                src={slide.image}
+                alt={`Khajuraho Dance Festival slide ${index + 1}`}
+                className="w-full h-full object-cover scale-105"
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </div>
+          );
+        })}
 
         {/* Gradient Overlays */}
         <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
+          className={`absolute inset-0 z-10 transition-opacity duration-500 ${
             isDark
               ? "bg-gradient-to-br from-dark-bg/90 via-indigo/70 to-dark-bg/80"
-              : "bg-gradient-to-br from-sandstone/60 via-indigo/50 to-charcoal/70"
+              : "bg-gradient-to-br from-charcoal/70 via-indigo/50 to-charcoal/70"
           }`}
         />
 
         {/* Temple Glow Effect */}
-        <div className="absolute inset-0 temple-glow" />
+        <div className="absolute inset-0 z-10 temple-glow" />
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              if (index !== currentSlide) {
+                setPreviousSlide(currentSlide);
+                setCurrentSlide(index);
+                setTimeout(() => {
+                  setPreviousSlide(null);
+                }, 1000);
+              }
+            }}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? "bg-saffron w-6"
+                : "bg-offwhite/40 hover:bg-offwhite/60"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Floating Marigold Petals */}
@@ -141,7 +200,7 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
 
       {/* Main Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-64  items-center min-h-screen lg:min-h-0 pt-20 lg:pt-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-64  items-center min-h-screen lg:min-h-0 pt-20 lg:pt-10">
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-6 md:space-y-8">
             {/* Pre-title Badge */}
@@ -164,9 +223,9 @@ const Hero = ({ isDark, festivalData, reducedMotion }) => {
             </h1>
 
             {/* Rotating Tagline */}
-            <div className="h-12 md:h-16 flex items-center justify-center lg:justify-start">
+            <div className=" flex items-center justify-center lg:justify-start">
               <p
-                className={`text-lg md:text-xl lg:text-2xl font-light ${
+                className={`text-lg md:text-xl lg:text-xl font-light ${
                   isDark ? "text-offwhite/90" : "text-offwhite/90"
                 }`}
               >

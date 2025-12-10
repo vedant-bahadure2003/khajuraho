@@ -79,7 +79,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
         } ${
           isScrolled
             ? isDark
-              ? "bg-dark-bg/95 backdrop-blur-xl shadow-lg shadow-gold-glow/10"
+              ? "bg-offwhite/10 backdrop-blur-xl shadow-lg shadow-gold-glow/10"
               : "bg-offwhite/95 backdrop-blur-xl shadow-lg"
             : "bg-transparent"
         }`}
@@ -95,36 +95,27 @@ const Navbar = ({ isDark, toggleTheme }) => {
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <svg
-                  className="w-8 h-8 md:w-10 md:h-10"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Temple Icon */}
-                  <path
-                    d="M20 2L4 16V38H36V16L20 2Z"
-                    className={`${
-                      isDark ? "fill-sandstone" : "fill-indigo"
-                    } transition-colors`}
+                <div className=" flex gap-3">
+                  <img
+                    src="/images/logo-khajuraho.png"
+                    alt="Khajuraho Festival Logo"
+                    className="h-10 w-auto object-contain"
                   />
-                  <path
-                    d="M20 2L12 10V20H28V10L20 2Z"
-                    className="fill-saffron"
+                  <img
+                    src="/images/mp-logo.png"
+                    alt="Khajuraho Festival Logo"
+                    className="h-10 w-auto object-contain"
                   />
-                  <path
-                    d="M16 22H24V38H16V22Z"
-                    className={`${
-                      isDark ? "fill-gold-glow" : "fill-sandstone"
-                    } transition-colors`}
-                  />
-                  <circle cx="20" cy="8" r="2" className="fill-offwhite" />
-                </svg>
+                </div>
                 <div className="absolute -inset-1 bg-saffron/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <span
                 className={`font-heading text-lg md:text-xl font-bold ${
-                  isDark ? "text-offwhite" : "text-charcoal"
+                  isDark
+                    ? "text-offwhite"
+                    : isScrolled
+                    ? "text-charcoal"
+                    : "text-offwhite"
                 } `}
               >
                 Khajuraho
@@ -140,8 +131,12 @@ const Navbar = ({ isDark, toggleTheme }) => {
                     to={link.href}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isDark
-                        ? "text-offwhite/80 hover:text-saffron hover:bg-white/5"
-                        : "text-charcoal/80 hover:text-indigo hover:bg-indigo/5"
+                        ? isScrolled
+                          ? "text-offwhite hover:text-saffron hover:bg-white/5"
+                          : "text-offwhite/80 hover:text-saffron hover:bg-white/5"
+                        : isScrolled
+                        ? "text-charcoal hover:text-indigo hover:bg-indigo/5"
+                        : "text-offwhite hover:text-saffron hover:bg-white/5"
                     } ${
                       location.pathname === link.href
                         ? isDark
@@ -159,8 +154,12 @@ const Navbar = ({ isDark, toggleTheme }) => {
                     onClick={(e) => scrollToSection(e, link.href)}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isDark
-                        ? "text-offwhite/80 hover:text-saffron hover:bg-white/5"
-                        : "text-charcoal/80 hover:text-indigo hover:bg-indigo/5"
+                        ? isScrolled
+                          ? "text-offwhite hover:text-saffron hover:bg-white/5"
+                          : "text-offwhite/80 hover:text-saffron hover:bg-white/5"
+                        : isScrolled
+                        ? "text-charcoal hover:text-indigo hover:bg-indigo/5"
+                        : "text-offwhite hover:text-saffron hover:bg-white/5"
                     }`}
                   >
                     {link.name}

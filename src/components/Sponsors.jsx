@@ -66,7 +66,7 @@ const Sponsors = ({ isDark, festivalData }) => {
   return (
     <section
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-b from-dark-bg via-indigo/5 to-dark-bg"
           : "bg-gradient-to-b from-offwhite via-white to-offwhite"

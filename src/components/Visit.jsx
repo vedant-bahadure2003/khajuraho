@@ -11,7 +11,7 @@ const Visit = ({ isDark, festivalData }) => {
     <section
       id="visit"
       ref={elementRef}
-      className={`relative py-20 md:py-32 overflow-hidden theme-transition ${
+      className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-b from-dark-bg via-indigo/10 to-dark-bg"
           : "bg-gradient-to-b from-white via-sandstone/10 to-white"

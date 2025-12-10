@@ -54,7 +54,7 @@ const Explore = ({ isDark }) => {
       description:
         "Experience mesmerizing cultural evenings with classical dance performances and the spectacular Sound & Light Show at the Western Group of Temples, bringing ancient stories to life under starlit skies.",
       image:
-        "https://imgs.search.brave.com/9uzwZnuMmx2j_-t8cTBbebPkZyFru9w-MReHT4-7HLA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91dHNh/di5nb3YuaW4vcHVi/bGljL3VwbG9hZHMv/ZXZlbnRfY292ZXJf/aW1hZ2UvZXZlbnRf/NTMvMTY0OTIzMTE1/MzE3NTMyNDM3OTku/amZpZg",
+        "https://static.toiimg.com/photo/msid-62691072,width-96,height-65.cms",
       duration: "1-2 hours",
       bestTime: "Evening (6-9 PM)",
       highlights: ["Classical Dance", "Sound & Light", "Night Photography"],

@@ -14,6 +14,10 @@ const LocalMarket = ({ isDark }) => {
     { id: "jewelry", label: "Jewelry" },
     { id: "textiles", label: "Textiles" },
     { id: "pottery", label: "Pottery" },
+    { id: "paintings", label: "Paintings" },
+    { id: "woodwork", label: "Woodwork" },
+    { id: "metalwork", label: "Metalwork" },
+    { id: "decor", label: "Home Décor" },
   ];
 
   const handicrafts = [
@@ -113,6 +117,197 @@ const LocalMarket = ({ isDark }) => {
       origin: "Metal Artisans",
       featured: false,
     },
+    {
+      id: 7,
+      name: "Madhubani Paintings",
+      category: "paintings",
+      description:
+        "Traditional folk art from Bihar made with natural dyes, known for intricate patterns and vibrant themes inspired by mythology and nature.",
+      image:
+        "https://c9admin.cottage9.com/uploads/2611/exploring-the-elegance-of-eadha-krishna-in-madhubani-paintings.jpg",
+      features: [
+        "What it is : Folk art with natural dyes.",
+        "Best sellers : Deity paintings, nature motifs.",
+      ],
+      priceRange: "₹500 - ₹25,000",
+      origin: "Bihar Artisans",
+      featured: true,
+    },
+    {
+      id: 8,
+      name: "Pashmina Shawls",
+      category: "textiles",
+      description:
+        "Ultra-soft handwoven shawls from Kashmir made from fine pashmina wool, globally famous for luxury and exquisite craftsmanship.",
+      image:
+        "https://www.pashmina.com/_next/image/?url=https%3A%2F%2Fpashmina.vtexassets.com%2Farquivos%2Fids%2F163375%2Flegacy-kani-shawl1.jpg%3Fv%3D638978042486230000&w=1920&q=75",
+      features: [
+        "What it is : Handwoven luxury wool shawls.",
+        "Best sellers : Embroidered stoles, plain wraps.",
+      ],
+      priceRange: "₹5,000 - ₹1,50,000",
+      origin: "Kashmir Weavers",
+      featured: true,
+    },
+    {
+      id: 9,
+      name: "Blue Pottery",
+      category: "pottery",
+      description:
+        "Eye-catching turquoise pottery from Jaipur made with quartz and natural dyes, often used for decorative items and home décor.",
+      image:
+        "https://www.shopkhoj.com/wp-content/uploads/2019/01/Blue-pottery-1.jpg",
+      features: [
+        "What it is : Quartz-based turquoise pottery.",
+        "Best sellers : Vases, plates, planters.",
+      ],
+      priceRange: "₹300 - ₹10,000",
+      origin: "Jaipur Craftsmen",
+      featured: false,
+    },
+
+    {
+      id: 11,
+      name: "Kathakali Masks",
+      category: "decor",
+      description:
+        "Colorful, hand-painted masks from Kerala inspired by classical Kathakali dance, popular as decorative curios and wall art.",
+      image:
+        "https://www.angroos.com/wp-content/uploads/2023/03/001-30-scaled-e1679373770892.jpg",
+      features: [
+        "What it is : Classical dance-inspired masks.",
+        "Best sellers : Wall hangings, mini masks.",
+      ],
+      priceRange: "₹500 - ₹8,000",
+      origin: "Kerala Artisans",
+      featured: false,
+    },
+    {
+      id: 12,
+      name: "Sandalwood Carvings",
+      category: "woodwork",
+      description:
+        "Fine carvings in pure sandalwood from Karnataka, including deity idols, decorative boxes, and aromatic therapy products.",
+      image: "https://kstdc.co/wp-content/uploads/2021/08/Sandalwood.jpg",
+      features: [
+        "What it is : Aromatic sandalwood carvings.",
+        "Best sellers : Deity statues, jewelry boxes.",
+      ],
+      priceRange: "₹1,000 - ₹50,000",
+      origin: "Karnataka Craftsmen",
+      featured: true,
+    },
+    {
+      id: 13,
+      name: "Channapatna Toys",
+      category: "woodwork",
+      description:
+        "Eco-friendly wooden toys from Karnataka lacquered with natural dyes—a UNESCO-recognized craft known for vibrant colors and safe materials.",
+      image:
+        "https://mommybabytimes.com/wp-content/uploads/2022/03/2019061585.jpg",
+      features: [
+        "What it is : UNESCO-recognized wooden toys.",
+        "Best sellers : Stacking toys, rattles, dolls.",
+      ],
+      priceRange: "₹100 - ₹3,000",
+      origin: "Channapatna Artisans",
+      featured: false,
+    },
+    {
+      id: 14,
+      name: "Bidriware",
+      category: "metalwork",
+      description:
+        "Unique black metal alloy craft from Bidar, Karnataka featuring intricate silver inlay work. Highly collectible décor and gift items.",
+      image:
+        "https://s7ap1.scene7.com/is/image/incredibleindia/bidriware-bidar-karnataka-craft-hero?qlt=82&ts=1726641338177",
+      features: [
+        "What it is : Silver inlay on black metal.",
+        "Best sellers : Vases, boxes, hookahs.",
+      ],
+      priceRange: "₹1,000 - ₹40,000",
+      origin: "Bidar Craftsmen",
+      featured: true,
+    },
+    {
+      id: 15,
+      name: "Warli Paintings",
+      category: "paintings",
+      description:
+        "Minimalistic tribal art from Maharashtra in white on mud backgrounds, increasingly popular for modern home décor and wall art.",
+      image: "https://i.ytimg.com/vi/UJtefdDzgpY/maxresdefault.jpg",
+      features: [
+        "What it is : Tribal art with geometric forms.",
+        "Best sellers : Canvas art, coasters, fabrics.",
+      ],
+      priceRange: "₹500 - ₹20,000",
+      origin: "Maharashtra Tribes",
+      featured: false,
+    },
+    {
+      id: 16,
+      name: "Dokra Art",
+      category: "metalwork",
+      description:
+        "Ancient lost-wax metal casting technique from Chhattisgarh, Odisha & West Bengal used to create tribal figurines, jewelry, and décor.",
+      image: "https://www.shopkhoj.com/wp-content/uploads/2019/01/dokra-t.jpg",
+      features: [
+        "What it is : Ancient tribal metal casting.",
+        "Best sellers : Animal figurines, jewelry.",
+      ],
+      priceRange: "₹300 - ₹15,000",
+      origin: "Eastern India Tribes",
+      featured: false,
+    },
+    {
+      id: 17,
+      name: "Marble Handicrafts",
+      category: "sculptures",
+      description:
+        "Exquisite marble work from Agra featuring Taj Mahal–style Pietra Dura inlay work, coasters, lamps, and miniature replicas.",
+      image:
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ba/68/ae.jpg",
+      features: [
+        "What it is : Pietra Dura inlay work.",
+        "Best sellers : Taj replicas, coasters, boxes.",
+      ],
+      priceRange: "₹500 - ₹1,00,000",
+      origin: "Agra Craftsmen",
+      featured: true,
+    },
+    {
+      id: 18,
+      name: "Meenakari Jewelry",
+      category: "jewelry",
+      description:
+        "Beautiful enamel-coated jewelry and décor from Rajasthan, known for colorful detailing and intricate designs on gold and silver.",
+      image:
+        "https://www.fashioncrab.com/wp-content/uploads/2021/06/meenakari-jewelleries-1.jpg",
+      features: [
+        "What it is : Enamel work on precious metals.",
+        "Best sellers : Earrings, necklaces, bangles.",
+      ],
+      priceRange: "₹1,000 - ₹50,000",
+      origin: "Rajasthan Artisans",
+      featured: false,
+    },
+
+    {
+      id: 20,
+      name: "Bamboo & Cane Crafts",
+      category: "decor",
+      description:
+        "Eco-friendly handcrafted items from Assam & Northeast India including baskets, furniture, lamps, and decorative pieces made from bamboo and cane.",
+      image:
+        "https://www.shutterstock.com/image-photo/multifaceted-aspects-rich-culture-artistry-600nw-2454286467.jpg",
+      features: [
+        "What it is : Sustainable bamboo handicrafts.",
+        "Best sellers : Baskets, lamps, furniture.",
+      ],
+      priceRange: "₹200 - ₹20,000",
+      origin: "Northeast India",
+      featured: false,
+    },
   ];
 
   const filteredItems =
@@ -193,7 +388,7 @@ const LocalMarket = ({ isDark }) => {
                 isDark ? "text-saffron" : "text-indigo"
               }`}
             >
-              Khajuraho Local Market
+              Artisan Bazaar at Khajuraho
             </span>
             <div
               className={`h-px w-12 ${
@@ -209,16 +404,16 @@ const LocalMarket = ({ isDark }) => {
               isDark ? "text-offwhite" : "text-charcoal"
             }`}
           >
-            Handcrafts & <span className="gradient-text">Curios</span>
+            Indian <span className="gradient-text">Handicrafts</span> & Curios
           </h2>
           <p
             className={`max-w-2xl mx-auto text-lg ${
               isDark ? "text-offwhite/70" : "text-charcoal/70"
             }`}
           >
-            Discover beautifully carved souvenirs, stone & metal sculptures,
-            traditional textiles, pottery and tribal jewellery — handpicked from
-            Khajuraho's market lanes.
+            Experience India's finest artisanal heritage! From Khajuraho's local
+            crafts to masterpieces from Kashmir, Rajasthan, Karnataka & beyond —
+            artisans from across the nation gather here for the festival.
           </p>
         </div>
 
@@ -326,7 +521,7 @@ const LocalMarket = ({ isDark }) => {
                   </h3>
 
                   <p
-                    className={`text-sm text-white/70 mb-4 line-clamp-2 transition-all duration-300 ${
+                    className={`text-sm text-white/90 mb-4 line-clamp-2 transition-all duration-300 ${
                       activeItem === item.id
                         ? "opacity-100 max-h-20"
                         : "opacity-70 max-h-12"
@@ -346,7 +541,7 @@ const LocalMarket = ({ isDark }) => {
                     {item.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2 text-sm text-white/80"
+                        className="flex items-start gap-2 text-sm text-white/90"
                       >
                         <span className="text-gold mt-0.5">•</span>
                         <span>{feature}</span>
@@ -360,12 +555,12 @@ const LocalMarket = ({ isDark }) => {
                       activeItem === item.id ? "opacity-100" : "opacity-60"
                     }`}
                   >
-                    <span className="text-xs text-white/60">
+                    <span className="text-xs text-white/90">
                       Crafted by: {item.origin}
                     </span>
-                    <span className="text-gold text-sm font-medium">
+                    {/* <span className="text-gold text-sm font-medium">
                       View Details →
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </div>

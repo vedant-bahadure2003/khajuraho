@@ -31,8 +31,8 @@ const Home = ({ isDark, reducedMotion }) => {
       />
       <WhatsNew isDark={isDark} />
       <TalentHunt isDark={isDark} />
-      <Judges isDark={isDark} />
       <Artists isDark={isDark} festivalData={festivalData} />
+      <Judges isDark={isDark} />
       <BecomeASponsor isDark={isDark} />
       <Highlights isDark={isDark} />
       <Explore isDark={isDark} />
@@ -42,7 +42,7 @@ const Home = ({ isDark, reducedMotion }) => {
       <About isDark={isDark} />
       <Schedule isDark={isDark} festivalData={festivalData} />
       <Visit isDark={isDark} festivalData={festivalData} />
-      <Sponsors isDark={isDark} festivalData={festivalData} />
+      {/* <Sponsors isDark={isDark} festivalData={festivalData} /> */}
 
       {/* <Registration isDark={isDark} festivalData={festivalData} />
       <FAQs isDark={isDark} festivalData={festivalData} /> */}
