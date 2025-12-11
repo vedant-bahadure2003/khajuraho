@@ -15,15 +15,18 @@ import {
   Chetan,
   WhatsNew,
   TalentHunt,
+  MPKnownFaces,
   BecomeASponsor,
   Judges,
   Highlights,
+  LeadPopup,
 } from "../components";
 import festivalData from "../data/festivalData.json";
 
 const Home = ({ isDark, reducedMotion }) => {
   return (
     <>
+      <LeadPopup />
       <Hero
         isDark={isDark}
         festivalData={festivalData}
@@ -31,6 +34,7 @@ const Home = ({ isDark, reducedMotion }) => {
       />
       <WhatsNew isDark={isDark} />
       <TalentHunt isDark={isDark} />
+      <MPKnownFaces isDark={isDark} />
       <Artists isDark={isDark} festivalData={festivalData} />
       <Judges isDark={isDark} />
       <BecomeASponsor isDark={isDark} />

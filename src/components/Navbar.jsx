@@ -69,10 +69,6 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 theme-transition ${
           isVisible ? "translate-y-0" : "-translate-y-full"
@@ -95,16 +91,11 @@ const Navbar = ({ isDark, toggleTheme }) => {
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <div className=" flex gap-3">
+                <div className=" flex gap-3 items-center  ">
                   <img
-                    src="/images/logo-khajuraho.png"
+                    src="/images/khajuraho-logo3.png"
                     alt="Khajuraho Festival Logo"
-                    className="h-10 w-auto object-contain"
-                  />
-                  <img
-                    src="/images/mp-logo.png"
-                    alt="Khajuraho Festival Logo"
-                    className="h-10 w-auto object-contain"
+                    className="h-20  object-contain "
                   />
                 </div>
                 <div className="absolute -inset-1 bg-saffron/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -225,13 +216,25 @@ const Navbar = ({ isDark, toggleTheme }) => {
               </button>
 
               {/* Register CTA */}
-              <a
+              {/* <a
                 href="#register"
                 onClick={(e) => scrollToSection(e, "#register")}
                 className="hidden sm:flex btn-ripple px-4 py-2 md:px-6 md:py-2.5 bg-gradient-to-r from-saffron to-sandstone text-white font-semibold rounded-full hover:shadow-lg hover:shadow-saffron/30 transition-all duration-300 hover:scale-105"
               >
                 Register
-              </a>
+              </a> */}
+              <div className="flex gap-4">
+                <img
+                  src="/images/logo-khajuraho.png"
+                  alt="Khajuraho Festival Logo"
+                  className="h-12 w-auto object-contain"
+                />
+                <img
+                  src="/images/mp-logo.png"
+                  alt="Khajuraho Festival Logo"
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -342,7 +345,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
             />
 
             {/* Register Button */}
-            <a
+            {/* <a
               href="#register"
               onClick={(e) => scrollToSection(e, "#register")}
               className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-saffron to-sandstone text-white font-semibold rounded-xl shadow-lg shadow-saffron/20 hover:shadow-xl hover:shadow-saffron/30 transition-all duration-300 active:scale-[0.98]"
@@ -361,7 +364,19 @@ const Navbar = ({ isDark, toggleTheme }) => {
                 />
               </svg>
               Register Now
-            </a>
+            </a> */}
+            <div>
+              <img
+                src="/images/logo-khajuraho.png"
+                alt="Khajuraho Festival Logo"
+                className="h-14 w-auto object-contain"
+              />
+              <img
+                src="/images/mp-logo.png"
+                alt="Khajuraho Festival Logo"
+                className="h-14 w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </nav>

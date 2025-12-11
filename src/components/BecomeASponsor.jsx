@@ -114,7 +114,7 @@ const BecomeASponsor = ({ isDark }) => {
       className={`relative py-20  overflow-hidden theme-transition ${
         isDark
           ? "bg-gradient-to-b from-dark-bg via-indigo/5 to-dark-bg"
-          : "bg-gradient-to-b from-offwhite via-white to-offwhite"
+          : "bg-gradient-to-b from-gray-100 via-white to-gray-100"
       }`}
     >
       {/* Background Pattern */}

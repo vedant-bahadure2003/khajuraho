@@ -12,13 +12,13 @@ const Hero = ({ isDark, reducedMotion }) => {
   const slides = useMemo(
     () => [
       {
-        image: "/images/banner-image.png",
+        image: "/images/banner-image2.png",
         // "https://khajurahodancefestival.com/slider/kdf-sl-3.png",
         // "https://theunstumbled.com/wp-content/uploads/2025/02/khajuraho-dance-festival.jpg",
         tagline: "A RICH TRADITION OF INDIA WITH YOUTH OF INDIA 2026",
       },
       {
-        image: "/images/banner-image2.png",
+        image: "/images/banner-image.png",
         // "https://russianbellydancers.com/wp-content/uploads/2025/04/1614281427Copy-of-Karishma-Tanna-performing-for-Mahindra-Tractors-Annual-Dealers-Meet-in-Mumbai.png",
         // "https://cloudfront-us-east-1.images.arcpublishing.com/ajc/QZ3RZGHVD5CTHFWVFORVT2QHGY.jpg",
         tagline:
@@ -94,7 +94,7 @@ const Hero = ({ isDark, reducedMotion }) => {
     <section
       id="hero"
       ref={elementRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden shadow-lg shadow-gray-400 mb-5 "
+      className="relative min-h-screen flex items-center justify-center overflow-hidden shadow-lg shadow-gray-400 mb-5  "
     >
       {/* Background Images Slideshow with Crossfade */}
       <div
@@ -218,7 +218,7 @@ const Hero = ({ isDark, reducedMotion }) => {
             {/* Main Title */}
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight flex flex-col gap-2 ">
               <span className="text-offwhite glow-text">Khajuraho </span>
-              <span className="text-offwhite glow-text">Natraj</span>{" "}
+              <span className="text-offwhite glow-text">Dance</span>{" "}
               <span className="gradient-text">Mahotsav 2026</span>
             </h1>
 

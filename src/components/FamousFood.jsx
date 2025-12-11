@@ -269,7 +269,9 @@ const FamousFood = ({ isDark }) => {
       id="food"
       ref={elementRef}
       className={`relative py-20  overflow-hidden theme-transition ${
-        isDark ? "bg-dark-bg" : "bg-offwhite"
+        isDark
+          ? "bg-dark-bg"
+          : "bg-gradient-to-b from-gray-100 via-white to-gray-100"
       }`}
     >
       {/* Decorative Background Elements */}

@@ -80,7 +80,9 @@ const WhatsNew = ({ isDark }) => {
       id="whats-new"
       ref={elementRef}
       className={`relative py-20 overflow-hidden theme-transition ${
-        isDark ? "bg-dark-bg" : "bg-gradient-to-b from-gray-50 to-white"
+        isDark
+          ? "bg-dark-bg"
+          : "bg-gradient-to-b from-gray-100 via-white to-gray-100"
       }`}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

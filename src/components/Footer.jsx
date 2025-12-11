@@ -266,6 +266,282 @@ const Footer = ({ isDark, festivalData }) => {
           </div>
         </div>
 
+        {/* Registration QR Section */}
+        <div
+          className={`mb-12 transition-all duration-700 delay-300 ${
+            hasIntersected
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div
+            className={`relative p-8 rounded-2xl overflow-hidden ${
+              isDark
+                ? "bg-gradient-to-br from-saffron/10 to-sandstone/10"
+                : "bg-gradient-to-br from-saffron/20 to-sandstone/20"
+            }`}
+          >
+            {/* Decorative border */}
+            <div className="absolute inset-0 rounded-2xl border-2 border-saffron/20" />
+
+            <div className="relative grid md:grid-cols-[1fr_auto] gap-8 items-center">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-saffron/20 rounded-full">
+                  <svg
+                    className="w-4 h-4 text-saffron"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="text-sm font-semibold text-saffron">
+                    Register Now
+                  </span>
+                </div>
+
+                <h4 className="font-heading text-2xl font-bold text-offwhite">
+                  Reserve Your Spot at the Festival
+                </h4>
+
+                <p className="text-offwhite/70 text-sm leading-relaxed max-w-md">
+                  Scan the QR code to complete your registration and be part of
+                  India's most prestigious classical dance festival. Limited
+                  seats available!
+                </p>
+
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <div className="flex items-center gap-2 text-offwhite/60 text-sm">
+                    <svg
+                      className="w-5 h-5 text-saffron"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Quick Registration
+                  </div>
+                  <div className="flex items-center gap-2 text-offwhite/60 text-sm">
+                    <svg
+                      className="w-5 h-5 text-saffron"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Instant Confirmation
+                  </div>
+                </div>
+              </div>
+
+              {/* QR Code Container */}
+              <div className="flex justify-center md:justify-end">
+                <div className="relative group">
+                  <div
+                    className={`absolute inset-0 rounded-2xl blur-xl transition-opacity duration-300 ${
+                      isDark ? "bg-saffron/20" : "bg-saffron/30"
+                    } group-hover:opacity-100 opacity-70`}
+                  />
+
+                  <div className="relative bg-white p-6 rounded-2xl shadow-2xl transform transition-transform duration-300 group-hover:scale-105">
+                    {/* QR Code Placeholder - Replace with actual QR code image */}
+                    <div className="w-40 h-40 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-32 h-32"
+                        viewBox="0 0 100 100"
+                        fill="none"
+                      >
+                        {/* QR Code Pattern */}
+                        <rect
+                          x="0"
+                          y="0"
+                          width="100"
+                          height="100"
+                          fill="white"
+                        />
+                        <rect x="5" y="5" width="15" height="15" fill="black" />
+                        <rect
+                          x="80"
+                          y="5"
+                          width="15"
+                          height="15"
+                          fill="black"
+                        />
+                        <rect
+                          x="5"
+                          y="80"
+                          width="15"
+                          height="15"
+                          fill="black"
+                        />
+                        <rect x="10" y="10" width="5" height="5" fill="white" />
+                        <rect x="85" y="10" width="5" height="5" fill="white" />
+                        <rect x="10" y="85" width="5" height="5" fill="white" />
+                        {/* Additional QR pattern elements */}
+                        <rect x="25" y="5" width="5" height="5" fill="black" />
+                        <rect x="35" y="5" width="5" height="5" fill="black" />
+                        <rect x="45" y="5" width="10" height="5" fill="black" />
+                        <rect x="60" y="5" width="5" height="5" fill="black" />
+                        <rect x="70" y="5" width="5" height="5" fill="black" />
+                        <rect x="5" y="25" width="5" height="5" fill="black" />
+                        <rect
+                          x="25"
+                          y="25"
+                          width="10"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="45"
+                          y="25"
+                          width="5"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="60"
+                          y="25"
+                          width="10"
+                          height="5"
+                          fill="black"
+                        />
+                        <rect
+                          x="80"
+                          y="25"
+                          width="5"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="5"
+                          y="45"
+                          width="10"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect x="25" y="45" width="5" height="5" fill="black" />
+                        <rect
+                          x="40"
+                          y="40"
+                          width="20"
+                          height="20"
+                          fill="black"
+                        />
+                        <rect
+                          x="45"
+                          y="45"
+                          width="10"
+                          height="10"
+                          fill="white"
+                        />
+                        <rect
+                          x="70"
+                          y="45"
+                          width="10"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="90"
+                          y="45"
+                          width="5"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect x="5" y="60" width="5" height="10" fill="black" />
+                        <rect
+                          x="25"
+                          y="60"
+                          width="10"
+                          height="5"
+                          fill="black"
+                        />
+                        <rect
+                          x="65"
+                          y="60"
+                          width="15"
+                          height="5"
+                          fill="black"
+                        />
+                        <rect x="90" y="60" width="5" height="5" fill="black" />
+                        <rect
+                          x="25"
+                          y="75"
+                          width="5"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="40"
+                          y="70"
+                          width="5"
+                          height="15"
+                          fill="black"
+                        />
+                        <rect
+                          x="50"
+                          y="75"
+                          width="10"
+                          height="5"
+                          fill="black"
+                        />
+                        <rect
+                          x="65"
+                          y="70"
+                          width="5"
+                          height="15"
+                          fill="black"
+                        />
+                        <rect
+                          x="75"
+                          y="75"
+                          width="10"
+                          height="10"
+                          fill="black"
+                        />
+                        <rect
+                          x="90"
+                          y="80"
+                          width="5"
+                          height="10"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="mt-3 text-center">
+                      <p className="text-xs font-semibold text-gray-800">
+                        Scan to Register
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Decorative corners */}
+                  <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-saffron rounded-tl-lg" />
+                  <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-saffron rounded-tr-lg" />
+                  <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-saffron rounded-bl-lg" />
+                  <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-saffron rounded-br-lg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div
           className={`flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10 transition-all duration-700 delay-300 ${
