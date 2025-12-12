@@ -223,7 +223,7 @@ const Hero = ({ isDark, reducedMotion }) => {
             </h1>
 
             {/* Rotating Tagline */}
-            <div className=" flex items-center justify-center lg:justify-start">
+            <div className="  flex items-center justify-center lg:justify-start  h-5 ">
               <p
                 className={`text-lg md:text-xl lg:text-xl font-light ${
                   isDark ? "text-offwhite/90" : "text-offwhite/90"
