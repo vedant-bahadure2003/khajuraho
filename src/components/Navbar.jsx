@@ -21,12 +21,19 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
+    const scrollDifference = Math.abs(currentScrollY - lastScrollY);
 
     setIsScrolled(currentScrollY > 50);
 
+    // Only react to scroll if the difference is significant (more than 10px)
+    // This prevents navbar from hiding on tiny scroll movements
+    if (scrollDifference < 10) return;
+
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down significantly - hide navbar
       setIsVisible(false);
-    } else {
+    } else if (currentScrollY < lastScrollY) {
+      // Scrolling up significantly - show navbar
       setIsVisible(true);
     }
 

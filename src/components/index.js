@@ -24,3 +24,4 @@ export { default as Highlights } from "./Highlights";
 export { default as KhajurahoMap } from "./KhajurahoMap";
 export { default as BottomBar } from "./BottomBar";
 export { default as LeadPopup } from "./LeadPopup";
+export { default as BageshwarDham } from "./BageshwarDham";

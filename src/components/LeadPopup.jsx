@@ -66,9 +66,9 @@ const LeadPopup = () => {
         >
           <div
             className="bg-gradient-to-b from-saffron via-orange-500 to-saffron 
-            rounded-l-lg py-6 px-1.5 shadow-lg
+            rounded-l-lg py-6  shadow-lg
             flex flex-col items-center justify-center gap-1
-            hover:px-2 transition-all duration-200"
+            hover:px-1 transition-all duration-200"
             style={{
               boxShadow: "-4px 0 15px rgba(255, 153, 51, 0.3)",
               writingMode: "vertical-rl",

@@ -1,40 +1,37 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const BottomBar = ({ isDark }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  const scrollTimeoutRef = useRef(null);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+    // Update scrolled state for background styling
+    setIsScrolled(currentScrollY > 50);
+
+    // Only react to scroll if the difference is significant (more than 10px)
+    // This prevents bar from hiding on tiny scroll movements
+    if (scrollDifference < 10) return;
+
+    // Hide when scrolling down, show when scrolling up
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down significantly - hide the bar
+      setIsVisible(false);
+    } else if (currentScrollY < lastScrollY) {
+      // Scrolling up significantly - show the bar
+      setIsVisible(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Update scrolled state for background styling
-      setIsScrolled(currentScrollY > 50);
-
-      // Hide the bar while scrolling
-      setIsVisible(false);
-
-      // Clear any existing timeout
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-
-      // Show the bar after scrolling stops (400ms delay for smoother UX)
-      scrollTimeoutRef.current = setTimeout(() => {
-        setIsVisible(true);
-      }, 400);
-    };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <div

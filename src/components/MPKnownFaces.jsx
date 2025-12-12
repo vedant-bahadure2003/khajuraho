@@ -26,14 +26,6 @@ const MPKnownFaces = ({ isDark }) => {
       message:
         "Every child deserves a childhood. Our state has a rich cultural heritage, and it is our duty to ensure that every child gets the opportunity to learn, grow, and contribute to preserving this legacy.",
     },
-    {
-      name: "Shivraj Singh Chouhan",
-      designation: "Union Minister of Agriculture & Rural Development",
-      image: "https://kj1bcdn.b-cdn.net/media/102401/shivraj-1.jpg",
-      bio: "Shivraj Singh Chouhan (born 5 March 1959, Jait, Sehore) is a senior BJP leader serving as Union Minister of Agriculture and Rural Development since 2024. Known as 'Mama' (maternal uncle), he served as CM of Madhya Pradesh four times (2005-2018, 2020-2023) and is the BJP's longest-serving Chief Minister.",
-      message:
-        "Madhya Pradesh's rich cultural heritage is our pride. From the magnificent temples of Khajuraho to our vibrant folk traditions, we must preserve and celebrate this legacy. The Khajuraho Dance Festival brings together art, spirituality, and tradition in a beautiful symphony.",
-    },
 
     {
       name: "Jyotiraditya Scindia",
@@ -424,54 +416,6 @@ const MPKnownFaces = ({ isDark }) => {
                 }}
               />
             </div>
-          </div>
-
-          {/* Thumbnail Navigation */}
-          <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            {personalities.map((person, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
-                className={`group flex items-center gap-3 px-4 py-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? isDark
-                      ? "bg-saffron/20 border-2 border-saffron"
-                      : "bg-indigo/10 border-2 border-indigo shadow-lg shadow-indigo/20"
-                    : isDark
-                    ? "bg-white/5 border border-white/10 hover:border-saffron/50"
-                    : "bg-white border border-gray-200 hover:border-indigo/50 hover:shadow-md"
-                }`}
-              >
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className={`w-8 h-8 rounded-full object-cover transition-transform duration-300 ${
-                    index === currentIndex ? "ring-2 ring-offset-2" : ""
-                  } ${
-                    index === currentIndex
-                      ? isDark
-                        ? "ring-saffron ring-offset-dark-bg"
-                        : "ring-indigo ring-offset-white"
-                      : ""
-                  }`}
-                />
-                <span
-                  className={`text-sm font-medium hidden sm:block ${
-                    index === currentIndex
-                      ? isDark
-                        ? "text-saffron"
-                        : "text-indigo"
-                      : isDark
-                      ? "text-offwhite/70"
-                      : "text-charcoal/70"
-                  }`}
-                >
-                  {person.name.split(" ").slice(-1)[0]}
-                </span>
-              </button>
-            ))}
           </div>
         </div>
       </div>
