@@ -15,7 +15,6 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
-import { ESLint } from "eslint";
 
 const BageshwarDham = ({ isDark }) => {
   const [activeTab, setActiveTab] = useState("baba");
